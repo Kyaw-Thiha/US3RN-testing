@@ -93,8 +93,7 @@ def load_test():
 print("===> Building model")
 
 
-# model = S3RNet().cuda()
-model = S3RNet(in_channels=220).cuda()
+model = S3RNet().cuda()
 print(
     "# network parameters: {}".format(
         sum(param.numel() for param in model.parameters())
