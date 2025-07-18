@@ -14,6 +14,7 @@ def load_downsample_save(
     spatial_scale: float = 4,
     spectral_scale: float = 4,
     spectral_algorithm="uniform",
+    target_size: tuple[int, int] = (-1, -1),
     out_bands: int = -1,
 ):
     """
@@ -32,6 +33,7 @@ def load_downsample_save(
     - spectral_algorithm: what algorithm to use for spectral downsampling
       "uniform" - Sample every 'spectral_scale' time
       "pca" - Sample using Principal Component Analysis (Retains spectral bands with most effect on data)
+    - target_size: (target_h, target_w) to resize to directly. (-1, -1) indicates using spatial_scale instead.
     - out_bands (int): spectral band to downsample to when using pca. -1 indicates using spectral_scale instead.
       Only used for pca
     """
@@ -42,7 +44,7 @@ def load_downsample_save(
             continue
         data = loadmat(os.path.join(input_dir, fname))
         img = data.get(key)
-        img = downsample(img, spatial_scale, spectral_scale, spectral_algorithm, out_bands)
+        img = downsample(img, spatial_scale, spectral_scale, spectral_algorithm, target_size, out_bands)
         print(f"[✓] Downsampled: {fname} ")
 
         savemat(
@@ -51,7 +53,14 @@ def load_downsample_save(
         )
 
 
-def downsample(img, spatial_scale: float = 4, spectral_scale: float = 4, spectral_algorithm="uniform", out_bands: int = -1):
+def downsample(
+    img,
+    spatial_scale: float = 4,
+    spectral_scale: float = 4,
+    spectral_algorithm="uniform",
+    target_size: tuple[int, int] = (-1, -1),
+    out_bands: int = -1,
+):
     """
     A function that downsample the given image by given spatial & spectral scales
     Parameters:
@@ -61,6 +70,7 @@ def downsample(img, spatial_scale: float = 4, spectral_scale: float = 4, spectra
     - spectral_algorithm: what algorithm to use for spectral downsampling
       "uniform" - Sample every 'spectral_scale' time
       "pca" - Sample using Principal Component Analysis (Retains spectral bands with most effect on data)
+    - target_size: (target_h, target_w) to resize to directly. (-1, -1) indicates using spatial_scale instead.
     - out_bands (int): spectral band to downsample to when using pca. -1 indicates using spectral_scale instead.
       Only used for pca
     """
@@ -70,12 +80,18 @@ def downsample(img, spatial_scale: float = 4, spectral_scale: float = 4, spectra
     h, w, c = img.shape
 
     # Downsample spatially
-    lowres = np.zeros((h // spatial_scale, w // spatial_scale, c), dtype=np.float32)
+    new_h, new_w = target_size
+    if new_h == -1:
+        new_h = h // spatial_scale
+    if new_w == -1:
+        new_w = w // spatial_scale
+
+    lowres = np.zeros((new_h, new_w, c), dtype=np.float32)
     for i in range(c):
         band = img[:, :, i]
         band = cv2.resize(
             band,
-            (w // spatial_scale, h // spatial_scale),
+            (new_w, new_h),
             interpolation=cv2.INTER_CUBIC,
         )
         lowres[:, :, i] = band
