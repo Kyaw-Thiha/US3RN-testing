@@ -11,9 +11,10 @@ def load_downsample_save(
     input_dir: str,
     output_dir: str,
     key: str,
-    spatial_scale=4,
-    spectral_scale=4,
+    spatial_scale: float = 4,
+    spectral_scale: float = 4,
     spectral_algorithm="uniform",
+    out_bands: int = -1,
 ):
     """
     A function that
@@ -26,12 +27,13 @@ def load_downsample_save(
     - output_dir: Output directory to save the downsampled mat images
     - key: key to access the img from mat files (msi for X, and RGB for Y)
     - img: h x w x s image file
-    - spatial_scale: how much scale to downsample on spatial level
-    - spectral_scale: how much scale to downsample on spectral level
+    - spatial_scale (float): how much scale to downsample on spatial level
+    - spectral_scale (float): how much scale to downsample on spectral level
     - spectral_algorithm: what algorithm to use for spectral downsampling
       "uniform" - Sample every 'spectral_scale' time
       "pca" - Sample using Principal Component Analysis (Retains spectral bands with most effect on data)
-
+    - out_bands (int): spectral band to downsample to when using pca. -1 indicates using spectral_scale instead.
+      Only used for pca
     """
     os.makedirs(output_dir, exist_ok=True)
 
@@ -40,7 +42,8 @@ def load_downsample_save(
             continue
         data = loadmat(os.path.join(input_dir, fname))
         img = data.get(key)
-        img = downsample(img, spatial_scale, spectral_scale, spectral_algorithm)
+        img = downsample(img, spatial_scale, spectral_scale, spectral_algorithm, out_bands)
+        print(f"[✓] Downsampled: {fname} ")
 
         savemat(
             os.path.join(output_dir, fname),
@@ -48,16 +51,18 @@ def load_downsample_save(
         )
 
 
-def downsample(img, spatial_scale=4, spectral_scale=4, spectral_algorithm="uniform"):
+def downsample(img, spatial_scale: float = 4, spectral_scale: float = 4, spectral_algorithm="uniform", out_bands: int = -1):
     """
     A function that downsample the given image by given spatial & spectral scales
     Parameters:
     - img: h x w x s image file
-    - spatial_scale: how much scale to downsample on spatial level
-    - spectral_scale: how much scale to downsample on spectral level
+    - spatial_scale (float): how much scale to downsample on spatial level
+    - spectral_scale (float): how much scale to downsample on spectral level
     - spectral_algorithm: what algorithm to use for spectral downsampling
       "uniform" - Sample every 'spectral_scale' time
       "pca" - Sample using Principal Component Analysis (Retains spectral bands with most effect on data)
+    - out_bands (int): spectral band to downsample to when using pca. -1 indicates using spectral_scale instead.
+      Only used for pca
     """
     if spectral_algorithm != "uniform" and spectral_algorithm != "pca":
         return
@@ -81,7 +86,9 @@ def downsample(img, spatial_scale=4, spectral_scale=4, spectral_algorithm="unifo
         lowres = lowres[:, :, ::spectral_scale]
     elif spectral_algorithm == "pca":
         # 2. PCA-based spectral downsampling
-        out_bands = c // spectral_scale
+        if out_bands < 0:
+            out_bands = c // spectral_scale
+        print(out_bands)
         H, W, C = lowres.shape
         reshaped = lowres.reshape(-1, C)  # shape: (H*W, C)
         pca = PCA(n_components=out_bands)

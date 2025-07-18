@@ -11,6 +11,7 @@ def change_key(input_dir: str, output_dir: str, new_key: str):
     and save the clean versions in the `output_dir`
     Currently, it does
     Change the main key to be 'new_key' parameter
+    Then, transpose the image from (H, W, C) into (C, H, W)
 
     Note that
     - X should have 'msi' key
@@ -28,6 +29,11 @@ def change_key(input_dir: str, output_dir: str, new_key: str):
                 continue
             if isinstance(value, np.ndarray):
                 img = data.get(key)
+
+                if img is not None and img.ndim == 3:
+                    img = img.transpose(2, 0, 1)
+                    print(f"Shape: {img.shape}")
+
                 savemat(
                     os.path.join(output_dir, fname),
                     {new_key: img},

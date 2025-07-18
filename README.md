@@ -41,4 +41,8 @@ python main.py --mode test --nEpochs 150
 ```
 
 
+### For logging out errors
+```python
+python main.py --mode test --nEpochs 152 > test_error.log 2>&1
+```
 

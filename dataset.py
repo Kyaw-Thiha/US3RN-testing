@@ -9,27 +9,26 @@ import torch
 import torch.nn.functional as F
 
 
-
 def is_image_file(filename):
     return any(filename.endswith(extension) for extension in [".png", ".jpg", ".jpeg", ".mat"])
 
 
 def load_img(filepath):
     x = sio.loadmat(filepath)
-    x = x['msi']
+    x = x["msi"]
     x = torch.tensor(x).float()
     return x
+
 
 def load_img1(filepath):
     x = sio.loadmat(filepath)
-    x = x['RGB']
+    x = x["RGB"]
     x = torch.tensor(x).float()
     return x
 
 
-
 class DatasetFromFolder(data.Dataset):
-    def __init__(self, image_dir1, image_dir2, upscale_factor, patch_size,input_transform=None):
+    def __init__(self, image_dir1, image_dir2, upscale_factor, patch_size, input_transform=None):
         super(DatasetFromFolder, self).__init__()
 
         self.patch_size = patch_size
@@ -53,22 +52,42 @@ class DatasetFromFolder(data.Dataset):
         img = self.xs[ind]
         img2 = self.ys[ind]
         upscale_factor = self.upscale_factor
-        w = np.random.randint(0, img.shape[0]-self.patch_size)
-        h = np.random.randint(0, img.shape[1]-self.patch_size)
-        X = img[w:w+self.patch_size, h:h+self.patch_size, :]
-        X_1 = img2[w:w+self.patch_size, h:h+self.patch_size, :]
-        X_2 = F.interpolate(X.permute(2,0,1).unsqueeze(0), scale_factor=1.0/upscale_factor, mode='bicubic', align_corners=False, recompute_scale_factor=False).squeeze(0).permute(1,2,0)
-        Y = F.interpolate(X_1.permute(2,0,1).unsqueeze(0), scale_factor=1.0/upscale_factor, mode='bicubic', align_corners=False, recompute_scale_factor=False).squeeze(0).permute(1,2,0)
+        w = np.random.randint(0, img.shape[0] - self.patch_size)
+        h = np.random.randint(0, img.shape[1] - self.patch_size)
+        X = img[w : w + self.patch_size, h : h + self.patch_size, :]
+        X_1 = img2[w : w + self.patch_size, h : h + self.patch_size, :]
+        X_2 = (
+            F.interpolate(
+                X.permute(2, 0, 1).unsqueeze(0),
+                scale_factor=1.0 / upscale_factor,
+                mode="bicubic",
+                align_corners=False,
+                recompute_scale_factor=False,
+            )
+            .squeeze(0)
+            .permute(1, 2, 0)
+        )
+        Y = (
+            F.interpolate(
+                X_1.permute(2, 0, 1).unsqueeze(0),
+                scale_factor=1.0 / upscale_factor,
+                mode="bicubic",
+                align_corners=False,
+                recompute_scale_factor=False,
+            )
+            .squeeze(0)
+            .permute(1, 2, 0)
+        )
 
         rotTimes = random.randint(0, 3)
         vFlip = random.randint(0, 1)
         hFlip = random.randint(0, 1)
 
         # Random rotation
-        X = torch.rot90(X, rotTimes, [0,1])
-        X_1 = torch.rot90(X_1, rotTimes, [0,1])
-        X_2 = torch.rot90(X_2, rotTimes, [0,1])
-        Y = torch.rot90(Y, rotTimes, [0,1])
+        X = torch.rot90(X, rotTimes, [0, 1])
+        X_1 = torch.rot90(X_1, rotTimes, [0, 1])
+        X_2 = torch.rot90(X_2, rotTimes, [0, 1])
+        Y = torch.rot90(Y, rotTimes, [0, 1])
 
         # Random vertical Flip
         for j in range(vFlip):
@@ -84,7 +103,7 @@ class DatasetFromFolder(data.Dataset):
             X_2 = X_2.flip(0)
             Y = Y.flip(0)
 
-        X = X.permute(2,0,1)
+        X = X.permute(2, 0, 1)
         X_1 = X_1.permute(2, 0, 1)
         X_2 = X_2.permute(2, 0, 1)
         Y = Y.permute(2, 0, 1)
@@ -109,7 +128,6 @@ class DatasetFromFolder2(data.Dataset):
             self.xs.append(load_img(img))
             self.xs_name.append(img)
 
-
         self.ys = []
         for img in self.image_filenames2:
             self.ys.append(load_img1(img))
@@ -121,12 +139,24 @@ class DatasetFromFolder2(data.Dataset):
         upscale_factor = self.upscale_factor
 
         X_1 = Y
-        Y = F.interpolate(X_1.permute(2,0,1).unsqueeze(0), scale_factor=1.0/upscale_factor, mode='bicubic', align_corners=False, recompute_scale_factor=False).squeeze(0).permute(1,2,0)
+        Y = (
+            F.interpolate(
+                X_1.permute(2, 0, 1).unsqueeze(0),
+                scale_factor=1.0 / upscale_factor,
+                mode="bicubic",
+                align_corners=False,
+                recompute_scale_factor=False,
+            )
+            .squeeze(0)
+            .permute(1, 2, 0)
+        )
 
         X = X.permute(2, 0, 1)
         Y = Y.permute(2, 0, 1)
 
         return Y, X, self.xs_name[index]
+        # return Y, X, self.xs_name[index]
 
     def __len__(self):
         return len(self.image_filenames1)
+

@@ -16,38 +16,25 @@ from model import S3RNet
 from data import get_patch_training_set, get_test_set
 from torch.autograd import Variable
 from psnr import MPSNR
+from ssim import MSSIM
 from datetime import datetime
 from torch.utils.tensorboard import SummaryWriter
 
 
 # Training settings
 parser = argparse.ArgumentParser(description="PyTorch Super Res Example")
-parser.add_argument(
-    "--upscale_factor", type=int, default=4, help="super resolution upscale factor"
-)
+parser.add_argument("--upscale_factor", type=int, default=4, help="super resolution upscale factor")
 parser.add_argument("--batchSize", type=int, default=8, help="training batch size")
 parser.add_argument("--patch_size", type=int, default=64, help="training patch size")
 parser.add_argument("--testBatchSize", type=int, default=1, help="testing batch size")
 parser.add_argument("--ChDim", type=int, default=31, help="output channel number")
 parser.add_argument("--alpha", type=float, default=0.2, help="alpha")
-parser.add_argument(
-    "--nEpochs", type=int, default=0, help="number of epochs to train for"
-)
-parser.add_argument(
-    "--lr", type=float, default=0.0001, help="Learning Rate. Default=0.01"
-)
-parser.add_argument(
-    "--threads", type=int, default=2, help="number of threads for data loader to use"
-)
-parser.add_argument(
-    "--seed", type=int, default=123, help="random seed to use. Default=123"
-)
-parser.add_argument(
-    "--save_folder", default="TrainedNet/", help="Directory to keep training outputs."
-)
-parser.add_argument(
-    "--outputpath", type=str, default="result/", help="Path to output img"
-)
+parser.add_argument("--nEpochs", type=int, default=0, help="number of epochs to train for")
+parser.add_argument("--lr", type=float, default=0.0001, help="Learning Rate. Default=0.01")
+parser.add_argument("--threads", type=int, default=2, help="number of threads for data loader to use")
+parser.add_argument("--seed", type=int, default=123, help="random seed to use. Default=123")
+parser.add_argument("--save_folder", default="TrainedNet/", help="Directory to keep training outputs.")
+parser.add_argument("--outputpath", type=str, default="result/", help="Path to output img")
 parser.add_argument("--mode", default="test", help="Train or Test.")
 opt = parser.parse_args()
 
@@ -94,11 +81,7 @@ print("===> Building model")
 
 
 model = S3RNet().cuda()
-print(
-    "# network parameters: {}".format(
-        sum(param.numel() for param in model.parameters())
-    )
-)
+print("# network parameters: {}".format(sum(param.numel() for param in model.parameters())))
 model = torch.nn.DataParallel(model).cuda()
 
 
@@ -117,9 +100,7 @@ criterion = nn.L1Loss()
 
 current_time = datetime.now().strftime("%b%d_%H-%M-%S")
 CURRENT_DATETIME_HOSTNAME = "/" + current_time + "_" + socket.gethostname()
-tb_logger = SummaryWriter(
-    log_dir="./tb_logger/" + "unfolding2" + CURRENT_DATETIME_HOSTNAME
-)
+tb_logger = SummaryWriter(log_dir="./tb_logger/" + "unfolding2" + CURRENT_DATETIME_HOSTNAME)
 current_step = 0
 
 
@@ -172,22 +153,15 @@ def train(epoch, optimizer, scheduler):
         optimizer.step()
 
         if iteration % 100 == 0:
-            print(
-                "===> Epoch[{}]({}/{}): Loss: {:.4f}".format(
-                    epoch, iteration, len(training_data_loader), loss.item()
-                )
-            )
-    print(
-        "===> Epoch {} Complete: Avg. Loss: {:.4f}".format(
-            epoch, epoch_loss / len(training_data_loader)
-        )
-    )
+            print("===> Epoch[{}]({}/{}): Loss: {:.4f}".format(epoch, iteration, len(training_data_loader), loss.item()))
+    print("===> Epoch {} Complete: Avg. Loss: {:.4f}".format(epoch, epoch_loss / len(training_data_loader)))
     return epoch_loss / len(training_data_loader)
 
 
 def test():
     testing_data_loader = load_test()
     avg_psnr = 0
+    avg_ssim = 0
     avg_time = 0
     model.eval()
 
@@ -205,7 +179,11 @@ def test():
 
             X = torch.squeeze(X).permute(1, 2, 0).cpu().numpy()
             HX = torch.squeeze(HX).permute(1, 2, 0).cpu().numpy()
+
+            print(f"X min/max: {X.min()}, {X.max()}")
+            print(f"HX min/max: {HX.min()}, {HX.max()}")
             psnr = MPSNR(HX, X)
+            ssim = MSSIM(HX, X)
             im_name = batch[2][0]
             print(im_name)
             print(end_time - start_time)
@@ -213,7 +191,9 @@ def test():
             (path, filename) = os.path.split(im_name)
             io.savemat(opt.outputpath + filename, {"HX": HX})
             avg_psnr += psnr
+            avg_ssim += ssim
     print("===> Avg. PSNR: {:.4f} dB".format(avg_psnr / len(testing_data_loader)))
+    print("===> Avg. SSIM: {:.4f}".format(avg_ssim / len(testing_data_loader)))
     print("===> Avg. time: {:.4f} s".format(avg_time / len(testing_data_loader)))
     return avg_psnr / len(testing_data_loader)
 
