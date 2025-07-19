@@ -16,6 +16,7 @@ def load_downsample_save(
     spectral_algorithm="uniform",
     target_size: tuple[int, int] = (-1, -1),
     out_bands: int = -1,
+    normalization: int = 1,
 ):
     """
     A function that
@@ -36,6 +37,7 @@ def load_downsample_save(
     - target_size: (target_h, target_w) to resize to directly. (-1, -1) indicates using spatial_scale instead.
     - out_bands (int): spectral band to downsample to when using pca. -1 indicates using spectral_scale instead.
       Only used for pca
+    - normalization (int 1 or 255): value to which to normalize the image to
     """
     os.makedirs(output_dir, exist_ok=True)
 
@@ -46,6 +48,15 @@ def load_downsample_save(
         img = data.get(key)
         img = downsample(img, spatial_scale, spectral_scale, spectral_algorithm, target_size, out_bands)
         print(f"[✓] Downsampled: {fname} ")
+
+        if img is not None and normalization == 1:
+            img = normalize_image(img)
+            print(f"[✓] Normalized to [0, 1]: {fname} ")
+        elif img is not None and normalization == 255:
+            img = normalize_to_uint8(img)
+            print(f"[✓] Normalized to [0, 255]: {fname} ")
+        else:
+            print(f"[✗] Skipping Normalization due to invalid value: {normalization} ")
 
         savemat(
             os.path.join(output_dir, fname),
@@ -112,6 +123,25 @@ def downsample(
         lowres = projected.reshape(H, W, out_bands)
 
     return lowres
+
+
+def normalize_image(img: np.ndarray) -> np.ndarray:
+    """
+    Normalize the image data to the range [0, 1].
+    """
+    min_val = np.min(img)
+    max_val = np.max(img)
+    if max_val - min_val == 0:
+        return np.zeros_like(img)  # Avoid division by zero
+    return (img - min_val) / (max_val - min_val)
+
+
+def normalize_to_uint8(img: np.ndarray) -> np.ndarray:
+    """
+    Normalize the image data to the range [0, 255] and convert to uint8.
+    """
+    img_norm = normalize_image(img)
+    return (img_norm * 255).astype(np.uint8)
 
 
 if __name__ == "__main__":
