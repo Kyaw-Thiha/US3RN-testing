@@ -7,15 +7,15 @@ def MPSNR(img1, img2):
     img1 = normalize_image(img1)
     img2 = normalize_image(img2)
 
-    # ch = np.size(img1, 2)
+    ch = np.size(img1, 2)
 
     # Crop the image to smallest dimension
-    h = min(img1.shape[0], img2.shape[0])
-    w = min(img1.shape[1], img2.shape[1])
-    ch = min(img1.shape[2], img2.shape[2]) if img1.ndim == 3 else 1
-
-    img1 = img1[:h, :w, :ch] if img1.ndim == 3 else img1[:h, :w]
-    img2 = img2[:h, :w, :ch] if img2.ndim == 3 else img2[:h, :w]
+    # h = min(img1.shape[0], img2.shape[0])
+    # w = min(img1.shape[1], img2.shape[1])
+    # ch = min(img1.shape[2], img2.shape[2]) if img1.ndim == 3 else 1
+    #
+    # img1 = img1[:h, :w, :ch] if img1.ndim == 3 else img1[:h, :w]
+    # img2 = img2[:h, :w, :ch] if img2.ndim == 3 else img2[:h, :w]
 
     # Calculate the PSNR
     if ch == 1:
