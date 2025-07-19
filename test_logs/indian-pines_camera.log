@@ -1,0 +1,12 @@
+Namespace(upscale_factor=4, batchSize=8, patch_size=64, testBatchSize=1, ChDim=31, alpha=0.2, nEpochs=152, lr=0.0001, threads=2, seed=123, save_folder='TrainedNet/', outputpath='result/', mode='test')
+===> Building model
+# network parameters: 295164
+---  There exsits folder TrainedNet/ !  ---
+---  There exsits folder result/ !  ---
+===> Loading test datasets
+X min/max: 0.0, 1.0
+HX min/max: -0.0007109567523002625, 0.9249024987220764
+Analyzing data/indian_pines/test/X/Indian_pines.mat
+===> Avg. PSNR: 19.4676 dB
+===> Avg. SSIM: 0.5934
+===> Avg. time: 0.2371 s
