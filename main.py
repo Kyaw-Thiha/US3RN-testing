@@ -185,8 +185,8 @@ def test():
             psnr = MPSNR(HX, X)
             ssim = MSSIM(HX, X)
             im_name = batch[2][0]
-            print(im_name)
-            print(end_time - start_time)
+            print(f"Analyzing {im_name}")
+
             avg_time += end_time - start_time
             (path, filename) = os.path.split(im_name)
             io.savemat(opt.outputpath + filename, {"HX": HX})
