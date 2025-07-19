@@ -22,7 +22,7 @@ def main(base_dir: str):
         f"{base_dir}/test/X",
         f"{base_dir}/test/X",
         "msi",
-        spectral_algorithm="pca",
+        spectral_algorithm="uniform",
         target_size=(spatial_target, spatial_target),
         out_bands=HSI_spectral_bands,
     )
@@ -35,7 +35,7 @@ def main(base_dir: str):
         f"{base_dir}/test/Y",
         f"{base_dir}/test/Y",
         "RGB",
-        spectral_algorithm="pca",
+        spectral_algorithm="uniform",
         target_size=(spatial_target, spatial_target),
         out_bands=MSI_spectral_bands,
     )

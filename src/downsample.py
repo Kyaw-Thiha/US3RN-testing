@@ -11,8 +11,8 @@ def load_downsample_save(
     input_dir: str,
     output_dir: str,
     key: str,
-    spatial_scale: float = 4,
-    spectral_scale: float = 4,
+    spatial_scale: float = 1,
+    spectral_scale: float = 1,
     spectral_algorithm="uniform",
     target_size: tuple[int, int] = (-1, -1),
     out_bands: int = -1,
@@ -66,8 +66,8 @@ def load_downsample_save(
 
 def downsample(
     img,
-    spatial_scale: float = 4,
-    spectral_scale: float = 4,
+    spatial_scale: float = 1,
+    spectral_scale: float = 1,
     spectral_algorithm="uniform",
     target_size: tuple[int, int] = (-1, -1),
     out_bands: int = -1,
@@ -81,11 +81,13 @@ def downsample(
     - spectral_algorithm: what algorithm to use for spectral downsampling
       "uniform" - Sample every 'spectral_scale' time
       "pca" - Sample using Principal Component Analysis (Retains spectral bands with most effect on data)
+      "camera" - Simulate to response function of a camera (Nikon D700 expects 31 spectral bands, return 3)
     - target_size: (target_h, target_w) to resize to directly. (-1, -1) indicates using spatial_scale instead.
     - out_bands (int): spectral band to downsample to when using pca. -1 indicates using spectral_scale instead.
       Only used for pca
     """
-    if spectral_algorithm != "uniform" and spectral_algorithm != "pca":
+    if spectral_algorithm != "uniform" and spectral_algorithm != "pca" and spectral_algorithm != "camera":
+        print("Error: Invalid Spectral Algorithm")
         return
 
     h, w, c = img.shape
@@ -110,19 +112,51 @@ def downsample(
     # Downsample spectrally
     if spectral_algorithm == "uniform":
         # 1. Uniformly sample every spectral_scale-th band
-        lowres = lowres[:, :, ::spectral_scale]
+        if out_bands < 0:
+            # fallback to current spectral_scale
+            lowres = lowres[:, :, ::spectral_scale]
+        else:
+            C = lowres.shape[2]
+            # Compute indices spaced evenly from 0 to C-1 for out_bands
+            indices = np.linspace(0, C - 1, out_bands, dtype=int)
+            lowres = lowres[:, :, indices]
     elif spectral_algorithm == "pca":
         # 2. PCA-based spectral downsampling
         if out_bands < 0:
             out_bands = c // spectral_scale
-        print(out_bands)
         H, W, C = lowres.shape
         reshaped = lowres.reshape(-1, C)  # shape: (H*W, C)
         pca = PCA(n_components=out_bands)
         projected = pca.fit_transform(reshaped)  # shape: (H*W, out_bands)
         lowres = projected.reshape(H, W, out_bands)
-
+    elif spectral_algorithm == "camera":
+        # 3. Downsample based on response function of a camera
+        lowres = simulate_msi_from_hsi(lowres)
     return lowres
+
+
+NIKON_D700_RESPONSE = np.load("NIKON_D700_RESPONSE.npy")
+
+
+def simulate_msi_from_hsi(hsi: np.ndarray, response: np.ndarray = NIKON_D700_RESPONSE) -> np.ndarray:
+    """
+    Simulate an MSI (RGB) image from an HSI image using a camera spectral response function.
+
+    Parameters:
+    - hsi (H x W x C): hyperspectral image, must have 31 spectral bands matching response
+    - response (3 x C): camera spectral response matrix (default: Nikon D700)
+
+    Returns:
+    - rgb (H x W x 3): simulated RGB image normalized to [0, 1]
+    """
+    assert hsi.shape[2] == response.shape[1], "HSI and response function must have same number of bands"
+
+    H, W, C = hsi.shape
+    hsi_reshaped = hsi.reshape(-1, C)  # (H*W, C)
+    rgb_reshaped = hsi_reshaped @ response.T  # (H*W, 3)
+    rgb = rgb_reshaped.reshape(H, W, 3)
+
+    return rgb
 
 
 def normalize_image(img: np.ndarray) -> np.ndarray:
