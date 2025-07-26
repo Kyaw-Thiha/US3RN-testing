@@ -3,10 +3,10 @@ from downsample import load_downsample_save
 
 
 FILE_PATH = "../data"
-data_src = "cuprite"
-HSI_spectral_bands = 81
-MSI_spectral_bands = 40
-spatial_target = 512
+data_src = "indian_pines"
+HSI_spectral_bands = 31
+MSI_spectral_bands = 3
+spatial_target = 64
 
 
 def main(base_dir: str):
@@ -22,8 +22,8 @@ def main(base_dir: str):
         f"{base_dir}/test/X",
         f"{base_dir}/test/X",
         "msi",
-        spectral_algorithm="pca",
-        # target_size=(spatial_target, spatial_target),
+        spectral_algorithm="uniform",
+        target_size=(spatial_target, spatial_target),
         out_bands=HSI_spectral_bands,
     )
     print("-------------------------------------")
@@ -35,7 +35,8 @@ def main(base_dir: str):
         f"{base_dir}/test/Y",
         f"{base_dir}/test/Y",
         "RGB",
-        spectral_algorithm="pca",
+        spectral_algorithm="uniform",
+        target_size=(spatial_target, spatial_target),
         out_bands=MSI_spectral_bands,
     )
     print("-------------------------------------")

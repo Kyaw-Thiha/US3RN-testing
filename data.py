@@ -39,7 +39,8 @@ def get_patch_training_set(upscale_factor, patch_size):
 
 def get_test_set(upscale_factor):
     # root_dir = "/data/mq/data/CAVEdata/"
-    root_dir = "data/indian_pines"
+    # root_dir = "data/indian_pines"
+    root_dir = "data/cuprite"
     test_dir1 = join(root_dir, "test/X")
     test_dir2 = join(root_dir, "test/Y")
 
