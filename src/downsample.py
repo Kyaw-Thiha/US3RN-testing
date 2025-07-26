@@ -47,16 +47,22 @@ def load_downsample_save(
         data = loadmat(os.path.join(input_dir, fname))
         img = data.get(key)
         img = downsample(img, spatial_scale, spectral_scale, spectral_algorithm, target_size, out_bands)
+
+        if img is None:
+            print(f"[✗] There was an error when downsampling {fname}")
+            return
         print(f"[✓] Downsampled: {fname} ")
 
-        if img is not None and normalization == 1:
+        if normalization == 1:
             img = normalize_image(img)
             print(f"[✓] Normalized to [0, 1]: {fname} ")
-        elif img is not None and normalization == 255:
+        elif normalization == 255:
             img = normalize_to_uint8(img)
             print(f"[✓] Normalized to [0, 255]: {fname} ")
         else:
             print(f"[✗] Skipping Normalization due to invalid value: {normalization} ")
+
+        print(f"Image Shape after downsampling: {img.shape}")
 
         savemat(
             os.path.join(output_dir, fname),
