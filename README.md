@@ -28,10 +28,15 @@ To train and test on CAVE data set, you must first download the CAVE data set fo
 
 ## Train
 
+### Train (from 0 Epoch)
 ```python
-python main.py --mode train
+python main.py --mode train --upscale_factor 2 --ChDim 81 --lr 0.01
 ```
 
+### Train (from 10 Epoch)
+```python
+python main.py --mode train --upscale_factor 2 --ChDim 81 --lr 0.01 --nEpochs 10
+```
 
 
 ## Test
