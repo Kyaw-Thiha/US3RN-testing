@@ -48,7 +48,8 @@ class DatasetFromFolder(data.Dataset):
         self.input_transform = input_transform
 
     def __getitem__(self, index):
-        ind = index % 22
+        # ind = index % 22
+        ind = index % len(self.xs)
         img = self.xs[ind]
         img2 = self.ys[ind]
         upscale_factor = self.upscale_factor
@@ -159,4 +160,3 @@ class DatasetFromFolder2(data.Dataset):
 
     def __len__(self):
         return len(self.image_filenames1)
-

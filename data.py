@@ -24,7 +24,7 @@ def input_transform():
 
 def get_patch_training_set(upscale_factor, patch_size):
     # root_dir = "/data/mq/data/CAVEdata/"
-    root_dir = "data/indian_pines"
+    root_dir = "data/cuprite"
     train_dir1 = join(root_dir, "train/X")
     train_dir2 = join(root_dir, "train/Y")
 
@@ -43,20 +43,14 @@ def get_test_set(upscale_factor):
     test_dir1 = join(root_dir, "test/X")
     test_dir2 = join(root_dir, "test/Y")
 
-    return DatasetFromFolder2(
-        test_dir1, test_dir2, upscale_factor, input_transform=input_transform()
-    )
+    return DatasetFromFolder2(test_dir1, test_dir2, upscale_factor, input_transform=input_transform())
 
 
 if __name__ == "__main__":
-    train_set = get_patch_training_set(2)
+    train_set = get_patch_training_set(2, 64)
     test_set = get_test_set(2)
-    training_data_loader = DataLoader(
-        dataset=train_set, num_workers=1, batch_size=8, shuffle=False
-    )
-    testing_data_loader = DataLoader(
-        dataset=test_set, num_workers=1, batch_size=8, shuffle=False
-    )
+    training_data_loader = DataLoader(dataset=train_set, num_workers=1, batch_size=8, shuffle=False)
+    testing_data_loader = DataLoader(dataset=test_set, num_workers=1, batch_size=8, shuffle=False)
     for iteration, batch in enumerate(training_data_loader, 1):
         Y, X_1, X_2, X = batch[0], batch[1], batch[2], batch[3]
         print("X", X.shape)

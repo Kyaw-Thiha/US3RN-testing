@@ -80,7 +80,10 @@ def load_test():
 print("===> Building model")
 
 
-model = S3RNet().cuda()
+HSI_spectral_bands = 81
+MSI_spectral_bands = 40
+spatial_scale = 2
+model = S3RNet(MSI_spectral_bands, HSI_spectral_bands, spatial_scale).cuda()
 print("# network parameters: {}".format(sum(param.numel() for param in model.parameters())))
 model = torch.nn.DataParallel(model).cuda()
 
