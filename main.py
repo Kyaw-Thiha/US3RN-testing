@@ -9,9 +9,12 @@ import os
 import random
 import time
 import socket
+import sys
 
 from torch.optim.lr_scheduler import StepLR, MultiStepLR
 from torch.utils.data import DataLoader
+from analytics.csv_logger import CSVLogger
+from analytics.tee_logger import TeeLogger
 from model import S3RNet
 from data import get_patch_training_set, get_test_set
 from torch.autograd import Variable
@@ -49,6 +52,9 @@ def set_random_seed(seed):
 
 
 set_random_seed(opt.seed)
+
+log_file_path = f"logs/train_logs/train_{opt.nEpochs}_.log"
+sys.stdout = TeeLogger(log_file_path)
 
 
 def load_train():
@@ -122,7 +128,12 @@ mkdir(opt.save_folder)
 mkdir(opt.outputpath)
 
 
+batch_log_path = "analytics/batch_log.csv"
+epoch_log_path = "analytics/epoch_log.csv"
+
+
 def train(epoch, optimizer, scheduler):
+    logger = CSVLogger(batch_log_path, epoch_log_path)
     training_data_loader = load_train()
     epoch_loss = 0
     global current_step
@@ -156,9 +167,13 @@ def train(epoch, optimizer, scheduler):
         optimizer.step()
 
         if iteration % 100 == 0:
+            logger.log_batch(epoch, iteration, loss.item())
             print("===> Epoch[{}]({}/{}): Loss: {:.4f}".format(epoch, iteration, len(training_data_loader), loss.item()))
-    print("===> Epoch {} Complete: Avg. Loss: {:.4f}".format(epoch, epoch_loss / len(training_data_loader)))
-    return epoch_loss / len(training_data_loader)
+
+    avg_loss = epoch_loss / len(training_data_loader)
+    logger.log_epoch(epoch, avg_loss)
+    print("===> Epoch {} Complete: Avg. Loss: {:.4f}".format(epoch, avg_loss))
+    return avg_loss
 
 
 def test():
@@ -220,6 +235,5 @@ if opt.mode == "train":
         avg_loss = train(epoch, optimizer, scheduler)
         checkpoint(epoch)
         scheduler.step()
-
 else:
     test()
