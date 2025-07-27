@@ -15,18 +15,8 @@ The code is for the work:
 
 
 
-## Requirements
-
-``` python
-pytorch == 1.6.1
-
-```
-
-### Dataset
-
-To train and test on CAVE data set, you must first download the CAVE data set form http://www.cs.columbia.edu/CAVE/databases/multispectral/. Put all the training images and test images in their respective folders. You can also download the processed data from https://drive.google.com/drive/folders/1lwsNkmDFW81PvRGPWWBh-5wQDtF8XgQ5?usp=sharing 
-
 ## Train
+Before training, ensure that in `get_patch_training_set` of `data.py`, the correct folder is chosen.
 
 ### Train (from 0 Epoch)
 ```python
@@ -40,6 +30,7 @@ python main.py --mode train --upscale_factor 2 --ChDim 81 --lr 0.01 --nEpochs 10
 
 
 ## Test
+Before testing, ensure that in `get_testing_set` of `data.py`, the correct folder is chosen.
 
 ```python
 python main.py --mode test --nEpochs 150
@@ -49,6 +40,22 @@ python main.py --mode test --nEpochs 150
 ### For logging out errors
 ```python
 python main.py --mode test --nEpochs 152 > test_error.log 2>&1
+```
+
+## Dataset Preparation
+1. Create a folder called `data` in the root directory.
+2. Create a folder for each of the dataset, and add either `.mat` or `.npy` file into there.
+Example: `/data/Indian_pines/Indian_pines.mat`. Note that file name does not matter.
+3. Go to `preprocess/test.py` and `preprocess/train.py` and change the data source if needed. 
+4. Ensure that the correct corresponding folder is chosen in `data.py`
+5. Run either or both of the following command from the root_directory.
+```bash
+python -m preprocess.train
+```
+
+
+```bash
+python -m preprocess.test
 ```
 
 
