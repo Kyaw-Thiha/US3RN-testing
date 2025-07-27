@@ -172,9 +172,9 @@ def train(epoch, optimizer, scheduler):
 
     avg_loss = round(epoch_loss / len(training_data_loader), 4)
     logger.log_epoch(epoch, avg_loss)
-    timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
-    print(f"[{timestamp}]")
     print("===> Epoch {} Complete: Avg. Loss: {:.4f}".format(epoch, avg_loss))
+    timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
+    print(f"===> Timestamp: [{timestamp}]")
     return avg_loss
 
 
