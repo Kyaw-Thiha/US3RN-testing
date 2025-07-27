@@ -128,8 +128,8 @@ mkdir(opt.save_folder)
 mkdir(opt.outputpath)
 
 
-batch_log_path = "analytics/batch_log.csv"
-epoch_log_path = "analytics/epoch_log.csv"
+batch_log_path = "analytics/batch_logs.csv"
+epoch_log_path = "analytics/epoch_logs.csv"
 
 
 def train(epoch, optimizer, scheduler):

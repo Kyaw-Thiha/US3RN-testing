@@ -51,3 +51,23 @@ python main.py --mode test --nEpochs 150
 python main.py --mode test --nEpochs 152 > test_error.log 2>&1
 ```
 
+
+## Analytics
+By default, all training logs are saved in
+- `analytics/epoch_logs.csv` and `analytics/batch_logs.csv`
+- `logs/train_logs/train_n_.log` for all printed outputs
+- Tensorboard logs at `tb_logger` folder
+
+### Plotting logs
+```python
+python -m analytics.plot_logs
+```
+
+### Importing logs from .log file into .csv file
+Make sure to edit the log and csv file paths first in the python file before running the following command.
+
+```python
+python -m analytics.import_logs_to_csv
+```
+
+

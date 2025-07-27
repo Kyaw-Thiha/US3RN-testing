@@ -7,8 +7,8 @@ import re
 
 from analytics.csv_logger import CSVLogger
 
-batch_log_file = "analytics/batch_log.csv"
-epoch_log_file = "analytics/epoch_log.csv"
+batch_log_file = "analytics/batch_logs.csv"
+epoch_log_file = "analytics/epoch_logs.csv"
 log_file = "logs/train_logs/train_10.log"
 
 
