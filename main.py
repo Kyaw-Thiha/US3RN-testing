@@ -167,10 +167,10 @@ def train(epoch, optimizer, scheduler):
         optimizer.step()
 
         if iteration % 100 == 0:
-            logger.log_batch(epoch, iteration, loss.item())
+            logger.log_batch(epoch, iteration, round(loss.item(), 4))
             print("===> Epoch[{}]({}/{}): Loss: {:.4f}".format(epoch, iteration, len(training_data_loader), loss.item()))
 
-    avg_loss = epoch_loss / len(training_data_loader)
+    avg_loss = round(epoch_loss / len(training_data_loader), 4)
     logger.log_epoch(epoch, avg_loss)
     print("===> Epoch {} Complete: Avg. Loss: {:.4f}".format(epoch, avg_loss))
     return avg_loss
