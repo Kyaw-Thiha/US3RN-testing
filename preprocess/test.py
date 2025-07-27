@@ -1,8 +1,8 @@
-from preprocess import change_key
-from downsample import load_downsample_save
+from preprocess.change_key import change_key
+from preprocess.downsample import load_downsample_save
 
 
-FILE_PATH = "../data"
+FILE_PATH = "data"
 data_src = "cuprite"
 HSI_spectral_bands = 81
 MSI_spectral_bands = 40

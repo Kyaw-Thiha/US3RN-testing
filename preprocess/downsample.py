@@ -4,7 +4,7 @@ import numpy as np
 from sklearn.decomposition import PCA
 import os
 
-FILE_PATH = "../data"
+FILE_PATH = "data"
 
 
 def load_downsample_save(
@@ -141,7 +141,7 @@ def downsample(
     return lowres
 
 
-NIKON_D700_RESPONSE = np.load("NIKON_D700_RESPONSE.npy")
+NIKON_D700_RESPONSE = np.load("preprocess/NIKON_D700_RESPONSE.npy")
 
 
 def simulate_msi_from_hsi(hsi: np.ndarray, response: np.ndarray = NIKON_D700_RESPONSE) -> np.ndarray:

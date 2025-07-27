@@ -2,7 +2,7 @@ from scipy.io import loadmat, savemat
 import os
 import numpy as np
 
-FILE_PATH = "../data"
+FILE_PATH = "data"
 
 
 def change_key(input_dir: str, output_dir: str, new_key: str):
