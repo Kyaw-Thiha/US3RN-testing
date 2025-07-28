@@ -56,9 +56,6 @@ def set_random_seed(seed):
 
 set_random_seed(opt.seed)
 
-log_file_path = f"logs/train_logs/train_{opt.nEpochs}_.log"
-sys.stdout = TeeLogger(log_file_path)
-
 
 def load_train():
     print("===> Loading train datasets")
@@ -136,7 +133,10 @@ epoch_log_path = "analytics/epoch_logs.csv"
 
 
 def train(epoch, optimizer, scheduler):
+    log_file_path = f"logs/train_logs/train_{opt.nEpochs}_.log"
+    sys.stdout = TeeLogger(log_file_path)
     logger = CSVLogger(batch_log_path, epoch_log_path)
+
     training_data_loader = load_train()
     epoch_loss = 0
     global current_step
