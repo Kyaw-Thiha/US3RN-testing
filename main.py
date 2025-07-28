@@ -23,6 +23,8 @@ from ssim import MSSIM
 from datetime import datetime
 from torch.utils.tensorboard import SummaryWriter
 
+from test import TestOptions, test
+
 
 # Training settings
 parser = argparse.ArgumentParser(description="PyTorch Super Res Example")
@@ -39,8 +41,9 @@ parser.add_argument("--seed", type=int, default=123, help="random seed to use. D
 parser.add_argument("--save_folder", default="TrainedNet/", help="Directory to keep training outputs.")
 parser.add_argument("--outputpath", type=str, default="result/", help="Path to output img")
 parser.add_argument("--mode", default="test", help="Train or Test.")
-opt = parser.parse_args()
 
+opt = parser.parse_args()
+opt = TestOptions(**vars(opt))
 print(opt)
 
 
@@ -70,17 +73,17 @@ def load_train():
     return training_data_loader
 
 
-def load_test():
-    print("===> Loading test datasets")
-    test_set = get_test_set(opt.upscale_factor)
-    testing_data_loader = DataLoader(
-        dataset=test_set,
-        num_workers=opt.threads,
-        batch_size=opt.testBatchSize,
-        shuffle=False,
-        pin_memory=True,
-    )
-    return testing_data_loader
+# def load_test():
+#     print("===> Loading test datasets")
+#     test_set = get_test_set(opt.upscale_factor)
+#     testing_data_loader = DataLoader(
+#         dataset=test_set,
+#         num_workers=opt.threads,
+#         batch_size=opt.testBatchSize,
+#         shuffle=False,
+#         pin_memory=True,
+#     )
+#     return testing_data_loader
 
 
 print("===> Building model")
@@ -178,44 +181,44 @@ def train(epoch, optimizer, scheduler):
     return avg_loss
 
 
-def test():
-    testing_data_loader = load_test()
-    avg_psnr = 0
-    avg_ssim = 0
-    avg_time = 0
-    model.eval()
-
-    with torch.no_grad():
-        for batch in testing_data_loader:
-            W, X = batch[0].cuda(), batch[1].cuda()
-            W = Variable(W).float()
-            X = Variable(X).float()
-            torch.cuda.synchronize()
-            start_time = time.time()
-
-            HX, HY, HZ, listX, listY, listZ = model(W)
-            torch.cuda.synchronize()
-            end_time = time.time()
-
-            X = torch.squeeze(X).permute(1, 2, 0).cpu().numpy()
-            HX = torch.squeeze(HX).permute(1, 2, 0).cpu().numpy()
-
-            print(f"X min/max: {X.min()}, {X.max()}")
-            print(f"HX min/max: {HX.min()}, {HX.max()}")
-            psnr = MPSNR(HX, X)
-            ssim = MSSIM(HX, X)
-            im_name = batch[2][0]
-            print(f"Analyzing {im_name}")
-
-            avg_time += end_time - start_time
-            (path, filename) = os.path.split(im_name)
-            io.savemat(opt.outputpath + filename, {"HX": HX})
-            avg_psnr += psnr
-            avg_ssim += ssim
-    print("===> Avg. PSNR: {:.4f} dB".format(avg_psnr / len(testing_data_loader)))
-    print("===> Avg. SSIM: {:.4f}".format(avg_ssim / len(testing_data_loader)))
-    print("===> Avg. time: {:.4f} s".format(avg_time / len(testing_data_loader)))
-    return avg_psnr / len(testing_data_loader)
+# def test():
+#     testing_data_loader = load_test()
+#     avg_psnr = 0
+#     avg_ssim = 0
+#     avg_time = 0
+#     model.eval()
+#
+#     with torch.no_grad():
+#         for batch in testing_data_loader:
+#             W, X = batch[0].cuda(), batch[1].cuda()
+#             W = Variable(W).float()
+#             X = Variable(X).float()
+#             torch.cuda.synchronize()
+#             start_time = time.time()
+#
+#             HX, HY, HZ, listX, listY, listZ = model(W)
+#             torch.cuda.synchronize()
+#             end_time = time.time()
+#
+#             X = torch.squeeze(X).permute(1, 2, 0).cpu().numpy()
+#             HX = torch.squeeze(HX).permute(1, 2, 0).cpu().numpy()
+#
+#             print(f"X min/max: {X.min()}, {X.max()}")
+#             print(f"HX min/max: {HX.min()}, {HX.max()}")
+#             psnr = MPSNR(HX, X)
+#             ssim = MSSIM(HX, X)
+#             im_name = batch[2][0]
+#             print(f"Analyzing {im_name}")
+#
+#             avg_time += end_time - start_time
+#             (path, filename) = os.path.split(im_name)
+#             io.savemat(opt.outputpath + filename, {"HX": HX})
+#             avg_psnr += psnr
+#             avg_ssim += ssim
+#     print("===> Avg. PSNR: {:.4f} dB".format(avg_psnr / len(testing_data_loader)))
+#     print("===> Avg. SSIM: {:.4f}".format(avg_ssim / len(testing_data_loader)))
+#     print("===> Avg. time: {:.4f} s".format(avg_time / len(testing_data_loader)))
+#     return avg_psnr / len(testing_data_loader)
 
 
 def checkpoint(epoch):
@@ -238,4 +241,4 @@ if opt.mode == "train":
         checkpoint(epoch)
         scheduler.step()
 else:
-    test()
+    test(model, opt)

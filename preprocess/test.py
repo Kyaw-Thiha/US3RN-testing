@@ -3,7 +3,7 @@ from preprocess.downsample import load_downsample_save
 
 
 FILE_PATH = "data"
-data_src = "cuprite"
+data_src = "ksc"
 HSI_spectral_bands = 81
 MSI_spectral_bands = 40
 spatial_target = 512

@@ -37,10 +37,10 @@ def get_patch_training_set(upscale_factor, patch_size):
     )
 
 
-def get_test_set(upscale_factor):
+def get_test_set(root_dir: str, upscale_factor):
     # root_dir = "/data/mq/data/CAVEdata/"
     # root_dir = "data/indian_pines"
-    root_dir = "data/cuprite"
+    # root_dir = "data/cuprite"
     test_dir1 = join(root_dir, "test/X")
     test_dir2 = join(root_dir, "test/Y")
 
@@ -49,7 +49,7 @@ def get_test_set(upscale_factor):
 
 if __name__ == "__main__":
     train_set = get_patch_training_set(2, 64)
-    test_set = get_test_set(2)
+    test_set = get_test_set("data/indian_pines", 2)
     training_data_loader = DataLoader(dataset=train_set, num_workers=1, batch_size=8, shuffle=False)
     testing_data_loader = DataLoader(dataset=test_set, num_workers=1, batch_size=8, shuffle=False)
     for iteration, batch in enumerate(training_data_loader, 1):

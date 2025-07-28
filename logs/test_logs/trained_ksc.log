@@ -1,0 +1,60 @@
+TestOptions(upscale_factor=2, batchSize=8, patch_size=64, testBatchSize=1, ChDim=31, alpha=0.2, nEpochs=50, lr=0.0001, threads=2, seed=123, save_folder='TrainedNet/', outputpath='result/', mode='test')
+===> Building model
+# network parameters: 1815375
+---  There exsits folder TrainedNet/ !  ---
+---  There exsits folder result/ !  ---
+===> Loading test datasets
+PSNR of Patch-1: 24.3434 dB
+SSIM of Patch-1: 0.9444
+-----------------------------
+PSNR of Patch-2: 37.6421 dB
+SSIM of Patch-2: 0.9867
+-----------------------------
+PSNR of Patch-3: 33.6327 dB
+SSIM of Patch-3: 0.976
+-----------------------------
+PSNR of Patch-4: 16.656 dB
+SSIM of Patch-4: 0.8723
+-----------------------------
+PSNR of Patch-5: 14.7896 dB
+SSIM of Patch-5: 0.807
+-----------------------------
+PSNR of Patch-6: 19.104 dB
+SSIM of Patch-6: 0.9144
+-----------------------------
+PSNR of Patch-7: 16.922 dB
+SSIM of Patch-7: 0.8672
+-----------------------------
+PSNR of Patch-8: 21.3764 dB
+SSIM of Patch-8: 0.935
+-----------------------------
+PSNR of Patch-9: 18.4974 dB
+SSIM of Patch-9: 0.8593
+-----------------------------
+PSNR of Patch-10: 29.6074 dB
+SSIM of Patch-10: 0.7499
+-----------------------------
+PSNR of Patch-11: 18.8114 dB
+SSIM of Patch-11: 0.846
+-----------------------------
+PSNR of Patch-12: 27.1503 dB
+SSIM of Patch-12: 0.8129
+-----------------------------
+PSNR of Patch-13: 14.2821 dB
+SSIM of Patch-13: 0.8396
+-----------------------------
+PSNR of Patch-14: 22.6088 dB
+SSIM of Patch-14: 0.8802
+-----------------------------
+PSNR of Patch-15: 25.3096 dB
+SSIM of Patch-15: 0.9028
+-----------------------------
+PSNR of Patch-16: 30.3868 dB
+SSIM of Patch-16: 0.8553
+-----------------------------
+Analyzing data/ksc/test/X/KSC.mat
+  - Patches: 16
+  - Avg Patch PSNR: 23.1950, SSIM: 0.8781
+===> Overall Avg. PSNR: 23.1950 dB
+===> Overall Avg. SSIM: 0.8781
+===> Avg. time: 0.6787 s

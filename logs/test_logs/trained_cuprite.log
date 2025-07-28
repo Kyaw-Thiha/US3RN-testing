@@ -1,0 +1,84 @@
+TestOptions(upscale_factor=2, batchSize=8, patch_size=64, testBatchSize=1, ChDim=31, alpha=0.2, nEpochs=50, lr=0.0001, threads=2, seed=123, save_folder='TrainedNet/', outputpath='result/', mode='test')
+===> Building model
+# network parameters: 1815375
+---  There exsits folder TrainedNet/ !  ---
+---  There exsits folder result/ !  ---
+===> Loading test datasets
+PSNR of Patch-1: 41.8024 dB
+SSIM of Patch-1: 0.996
+-----------------------------
+PSNR of Patch-2: 37.3975 dB
+SSIM of Patch-2: 0.9956
+-----------------------------
+PSNR of Patch-3: 45.969 dB
+SSIM of Patch-3: 0.9925
+-----------------------------
+PSNR of Patch-4: 46.768 dB
+SSIM of Patch-4: 0.993
+-----------------------------
+PSNR of Patch-5: 46.053 dB
+SSIM of Patch-5: 0.9934
+-----------------------------
+PSNR of Patch-6: 46.7639 dB
+SSIM of Patch-6: 0.9919
+-----------------------------
+PSNR of Patch-7: 41.2474 dB
+SSIM of Patch-7: 0.9921
+-----------------------------
+PSNR of Patch-8: 46.256 dB
+SSIM of Patch-8: 0.9918
+-----------------------------
+PSNR of Patch-9: 16.6651 dB
+SSIM of Patch-9: 0.8777
+-----------------------------
+PSNR of Patch-10: 17.7728 dB
+SSIM of Patch-10: 0.8921
+-----------------------------
+PSNR of Patch-11: 19.872 dB
+SSIM of Patch-11: 0.9292
+-----------------------------
+PSNR of Patch-12: 19.3779 dB
+SSIM of Patch-12: 0.9307
+-----------------------------
+PSNR of Patch-13: 22.683 dB
+SSIM of Patch-13: 0.9502
+-----------------------------
+PSNR of Patch-14: 13.2518 dB
+SSIM of Patch-14: 0.8603
+-----------------------------
+PSNR of Patch-15: 11.293 dB
+SSIM of Patch-15: 0.7959
+-----------------------------
+PSNR of Patch-16: 11.3364 dB
+SSIM of Patch-16: 0.7977
+-----------------------------
+PSNR of Patch-17: 22.3096 dB
+SSIM of Patch-17: 0.9378
+-----------------------------
+PSNR of Patch-18: 20.1729 dB
+SSIM of Patch-18: 0.9338
+-----------------------------
+PSNR of Patch-19: 24.7654 dB
+SSIM of Patch-19: 0.9472
+-----------------------------
+PSNR of Patch-20: 22.823 dB
+SSIM of Patch-20: 0.9468
+-----------------------------
+PSNR of Patch-21: 24.5459 dB
+SSIM of Patch-21: 0.947
+-----------------------------
+PSNR of Patch-22: 23.8821 dB
+SSIM of Patch-22: 0.945
+-----------------------------
+PSNR of Patch-23: 28.2797 dB
+SSIM of Patch-23: 0.9509
+-----------------------------
+PSNR of Patch-24: 25.8858 dB
+SSIM of Patch-24: 0.9497
+-----------------------------
+Analyzing data/cuprite/test/X/cuprite512.mat
+  - Patches: 24
+  - Avg Patch PSNR: 28.2156, SSIM: 0.9391
+===> Overall Avg. PSNR: 28.2156 dB
+===> Overall Avg. SSIM: 0.9391
+===> Avg. time: 0.9476 s
