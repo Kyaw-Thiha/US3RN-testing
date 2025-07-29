@@ -22,6 +22,7 @@ class TestOptions:
     ChDim: int
     alpha: float
     nEpochs: int
+    endEpochs: int
     lr: float
     threads: int
     seed: int

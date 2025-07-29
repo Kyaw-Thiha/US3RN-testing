@@ -34,7 +34,8 @@ parser.add_argument("--patch_size", type=int, default=64, help="training patch s
 parser.add_argument("--testBatchSize", type=int, default=1, help="testing batch size")
 parser.add_argument("--ChDim", type=int, default=31, help="output channel number")
 parser.add_argument("--alpha", type=float, default=0.2, help="alpha")
-parser.add_argument("--nEpochs", type=int, default=0, help="number of epochs to train for")
+parser.add_argument("--nEpochs", type=int, default=0, help="number of epochs to start training")
+parser.add_argument("--endEpochs", type=int, default=160, help="number of epochs to stop training")
 parser.add_argument("--lr", type=float, default=0.0001, help="Learning Rate. Default=0.01")
 parser.add_argument("--threads", type=int, default=2, help="number of threads for data loader to use")
 parser.add_argument("--seed", type=int, default=123, help="random seed to use. Default=123")
@@ -236,7 +237,7 @@ def checkpoint(epoch):
 
 
 if opt.mode == "train":
-    for epoch in range(opt.nEpochs + 1, 161):
+    for epoch in range(opt.nEpochs + 1, opt.endEpochs + 1):
         avg_loss = train(epoch, optimizer, scheduler)
         checkpoint(epoch)
         scheduler.step()

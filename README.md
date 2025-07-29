@@ -28,6 +28,11 @@ python main.py --mode train --upscale_factor 2 --ChDim 81 --lr 0.01
 python main.py --mode train --upscale_factor 2 --ChDim 81 --lr 0.01 --nEpochs 10
 ```
 
+### Train (from 10 to 50 Epoch)
+```python
+python main.py --mode train --upscale_factor 2 --ChDim 81 --lr 0.01 --nEpochs 10 --endEpochs 50
+```
+
 
 ## Test
 Before testing, ensure that in `get_testing_set` of `data.py`, the correct folder is chosen.
