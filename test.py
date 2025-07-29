@@ -1,3 +1,4 @@
+import sys
 import time
 import os
 from typing import List, Tuple
@@ -8,6 +9,7 @@ import torch.nn.functional as F
 import scipy.io as io
 from torch.utils.data import DataLoader
 
+from analytics.tee_logger import TeeLogger
 from data import get_test_set
 from psnr import MPSNR
 from ssim import MSSIM
@@ -112,6 +114,9 @@ def test(model: torch.nn.Module, opt: TestOptions) -> float:
     Returns:
         float: Average PSNR across all test samples.
     """
+    log_file_path = f"logs/test_logs/test_{opt.nEpochs}.log"
+    sys.stdout = TeeLogger(log_file_path)
+
     testing_data_loader = load_test(opt)
     patch_size = 64
     stride = 64  # no overlap

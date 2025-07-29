@@ -134,7 +134,7 @@ epoch_log_path = "analytics/epoch_logs.csv"
 
 
 def train(epoch, optimizer, scheduler):
-    log_file_path = f"logs/train_logs/train_{opt.nEpochs}_.log"
+    log_file_path = f"logs/train_logs/train_{opt.nEpochs}_{opt.endEpochs}.log"
     sys.stdout = TeeLogger(log_file_path)
     logger = CSVLogger(batch_log_path, epoch_log_path)
 
