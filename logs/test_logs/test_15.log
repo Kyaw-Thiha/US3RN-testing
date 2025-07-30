@@ -1,0 +1,55 @@
+===> Loading test datasets
+PSNR of Patch-1: 12.402 dB
+SSIM of Patch-1: 0.5117
+-----------------------------
+PSNR of Patch-2: 38.609 dB
+SSIM of Patch-2: 0.9852
+-----------------------------
+PSNR of Patch-3: 17.2354 dB
+SSIM of Patch-3: 0.8287
+-----------------------------
+PSNR of Patch-4: 10.5936 dB
+SSIM of Patch-4: 0.5043
+-----------------------------
+PSNR of Patch-5: 8.7741 dB
+SSIM of Patch-5: 0.4123
+-----------------------------
+PSNR of Patch-6: 12.7095 dB
+SSIM of Patch-6: 0.719
+-----------------------------
+PSNR of Patch-7: 9.5367 dB
+SSIM of Patch-7: 0.4192
+-----------------------------
+PSNR of Patch-8: 10.9318 dB
+SSIM of Patch-8: 0.5341
+-----------------------------
+PSNR of Patch-9: 9.8626 dB
+SSIM of Patch-9: 0.4412
+-----------------------------
+PSNR of Patch-10: 25.8388 dB
+SSIM of Patch-10: 0.7226
+-----------------------------
+PSNR of Patch-11: 17.735 dB
+SSIM of Patch-11: 0.8278
+-----------------------------
+PSNR of Patch-12: 16.1804 dB
+SSIM of Patch-12: 0.6745
+-----------------------------
+PSNR of Patch-13: 6.0646 dB
+SSIM of Patch-13: 0.2756
+-----------------------------
+PSNR of Patch-14: 21.6798 dB
+SSIM of Patch-14: 0.9002
+-----------------------------
+PSNR of Patch-15: 10.5487 dB
+SSIM of Patch-15: 0.4405
+-----------------------------
+PSNR of Patch-16: 13.3469 dB
+SSIM of Patch-16: 0.7148
+-----------------------------
+Analyzing data/ksc/test/X/KSC.mat
+  - Patches: 16
+  - Avg Patch PSNR: 15.1281, SSIM: 0.6195
+===> Overall Avg. PSNR: 15.1281 dB
+===> Overall Avg. SSIM: 0.6195
+===> Avg. time: 2.5278 s

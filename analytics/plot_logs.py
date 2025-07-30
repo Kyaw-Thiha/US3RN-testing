@@ -5,7 +5,7 @@ from typing import Literal
 
 KeyType = Literal["epoch", "batch"]
 
-FILE_PATH = "analytics"
+FILE_PATH = "logs/csv"
 
 csv_file = "epoch_logs.csv"
 plot_key: KeyType = "epoch"
