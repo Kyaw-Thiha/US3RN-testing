@@ -2,7 +2,6 @@ import sys
 import time
 import os
 from typing import List, Tuple
-from dataclasses import dataclass
 
 import torch
 import torch.nn.functional as F
@@ -11,33 +10,16 @@ from torch.utils.data import DataLoader
 
 from analytics.tee_logger import TeeLogger
 from data import get_test_set
-from main import build_model, load_model
-from psnr import MPSNR
-from ssim import MSSIM
+from core.psnr import MPSNR
+from core.ssim import MSSIM
 
-
-@dataclass
-class TestOptions:
-    upscale_factor: int
-    batchSize: int
-    patch_size: int
-    testBatchSize: int
-    ChDim: int
-    alpha: float
-    nEpochs: int
-    endEpochs: int
-    lr: float
-    threads: int
-    seed: int
-    save_folder: str
-    outputpath: str
-    mode: str
+from core.core import Options, build_model, load_model
 
 
 test_dir = "data/ksc"
 
 
-def load_test(opt: TestOptions):
+def load_test(opt: Options):
     """
     Loads the test dataset using options provided.
 
@@ -108,7 +90,7 @@ def reconstruct_from_patches(
     return output / count.clamp(min=1)
 
 
-def test(model: torch.nn.Module, opt: TestOptions) -> float:
+def test(model: torch.nn.Module, opt: Options, print_patch: bool = True) -> float:
     """
     Tests the model using 64x64 patches of hyperspectral images and computes PSNR and SSIM.
 
@@ -162,9 +144,10 @@ def test(model: torch.nn.Module, opt: TestOptions) -> float:
                 psnr = MPSNR(HX_patch.cpu().permute(1, 2, 0).numpy(), X_patch.cpu().permute(1, 2, 0).numpy())
                 ssim = MSSIM(HX_patch.cpu().permute(1, 2, 0).numpy(), X_patch.cpu().permute(1, 2, 0).numpy())
 
-                print(f"PSNR of Patch-{i + 1}: {round(psnr, 4)} dB")
-                print(f"SSIM of Patch-{i + 1}: {round(ssim, 4)}")
-                print("-----------------------------")
+                if print_patch:
+                    print(f"PSNR of Patch-{i + 1}: {round(psnr, 4)} dB")
+                    print(f"SSIM of Patch-{i + 1}: {round(ssim, 4)}")
+                    print("-----------------------------")
 
                 patch_psnrs.append(psnr)
                 patch_ssims.append(ssim)
@@ -180,9 +163,10 @@ def test(model: torch.nn.Module, opt: TestOptions) -> float:
             avg_ssim += sum(patch_ssims) / len(patch_ssims)
             avg_time += end_time - start_time
 
-            print(f"Analyzing {im_name[0]}")
-            print(f"  - Patches: {len(patch_psnrs)}")
-            print(f"  - Avg Patch PSNR: {avg_psnr:.4f}, SSIM: {avg_ssim:.4f}")
+            if len(testing_data_loader) > 1:
+                print(f"Analyzing {im_name[0]}")
+                print(f"  - Patches: {len(patch_psnrs)}")
+                print(f"  - Avg Patch PSNR: {avg_psnr:.4f}, SSIM: {avg_ssim:.4f}")
 
             io.savemat(opt.outputpath + os.path.basename(im_name[0]), {"HX": HX_full.permute(1, 2, 0).cpu().numpy()})
 
@@ -192,8 +176,34 @@ def test(model: torch.nn.Module, opt: TestOptions) -> float:
     return avg_psnr / len(testing_data_loader)
 
 
-def batch_test(msi_spectral_bands: int, hsi_spectral_bands: int, opt: TestOptions, start_epoch=0, end_epoch=150, step=5):
+def batch_test(
+    msi_spectral_bands: int, hsi_spectral_bands: int, opt: Options, start_epoch: int = 5, end_epoch: int = 150, step: int = 5
+):
+    """
+    Perform batch testing over multiple epochs using saved model checkpoints.
+
+    Parameters
+    ----------
+    msi_spectral_bands : int
+        Number of spectral bands in the MSI input.
+    hsi_spectral_bands : int
+        Number of spectral bands in the HSI ground truth.
+    opt : Options
+        Configuration object containing testing parameters.
+    start_epoch : int, optional
+        Starting epoch number for testing (default is 5).
+    end_epoch : int, optional
+        Final epoch number for testing (default is 150).
+    step : int, optional
+        Step interval between tested epochs (default is 5).
+
+    Returns
+    -------
+    None
+    """
     model, optimizer, scheduler, criterion = build_model(msi_spectral_bands, hsi_spectral_bands, opt)
-    for epoch in range(start_epoch + 1, end_epoch + 1, step):
+    for epoch in range(start_epoch, end_epoch + 1, step):
+        print(f"\n Testing Epoch-{epoch}")
         model, optimizer = load_model(model, optimizer, epoch, opt)
-        test(model, opt)
+        test(model, opt, print_patch=False)
+        print("-----------------------------")

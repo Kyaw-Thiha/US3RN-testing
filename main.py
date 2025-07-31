@@ -18,12 +18,11 @@ from analytics.tee_logger import TeeLogger
 from model import S3RNet
 from data import get_patch_training_set, get_test_set
 from torch.autograd import Variable
-from psnr import MPSNR
-from ssim import MSSIM
 from datetime import datetime
 from torch.utils.tensorboard import SummaryWriter
 
-from test import TestOptions, batch_test, test
+from core.core import Options, build_model, load_model
+from core.test import batch_test, test
 
 
 # Training settings
@@ -44,7 +43,7 @@ parser.add_argument("--outputpath", type=str, default="result/", help="Path to o
 parser.add_argument("--mode", default="test", help="Train or Test.")
 
 opt = parser.parse_args()
-opt = TestOptions(**vars(opt))
+opt = Options(**vars(opt))
 print(opt)
 
 
@@ -84,36 +83,6 @@ def load_train():
 #     return testing_data_loader
 
 
-def build_model(msi_spectral_bands: int, hsi_spectral_bands: int, opt: TestOptions):
-    print("===> Building model")
-
-    model = S3RNet(msi_spectral_bands, hsi_spectral_bands, opt.upscale_factor).cuda()
-    print("# network parameters: {}".format(sum(param.numel() for param in model.parameters())))
-    model = torch.nn.DataParallel(model).cuda()
-
-    optimizer = optim.Adam(model.parameters(), lr=opt.lr)
-    scheduler = MultiStepLR(optimizer, milestones=[10, 30, 60, 120], gamma=0.5)
-    criterion = nn.L1Loss()
-
-    print("===> Model successfully built")
-
-    return model, optimizer, scheduler, criterion
-
-
-def load_model(model: torch.nn.Module, optimizer, nEpochs: int, opt: TestOptions):
-    if nEpochs != 0:
-        print("===> Loading existing model")
-
-        load_dict = torch.load(opt.save_folder + "_epoch_{}.pth".format(opt.nEpochs))
-        opt.lr = load_dict["lr"]
-        epoch = load_dict["epoch"]
-        model.load_state_dict(load_dict["param"])
-        optimizer.load_state_dict(load_dict["adam"])
-
-        print("===> Finished loading model")
-    return model, optimizer
-
-
 current_time = datetime.now().strftime("%b%d_%H-%M-%S")
 CURRENT_DATETIME_HOSTNAME = "/" + current_time + "_" + socket.gethostname()
 tb_logger = SummaryWriter(log_dir="./tb_logger/" + "unfolding2" + CURRENT_DATETIME_HOSTNAME)
@@ -139,7 +108,7 @@ batch_log_path = "analytics/batch_logs.csv"
 epoch_log_path = "analytics/epoch_logs.csv"
 
 
-def train(epoch, optimizer, scheduler):
+def train(epoch: int, optimizer: optim.Optimizer, scheduler: optim.lr_scheduler.LRScheduler):
     # Setting up the logging
     log_file_path = f"logs/train_logs/train_{opt.nEpochs}_{opt.endEpochs}.log"
     sys.stdout = TeeLogger(log_file_path)
@@ -260,4 +229,4 @@ if __name__ == "__main__":
         else:
             test(model, opt)
     else:
-        batch_test(MSI_spectral_bands, HSI_spectral_bands, opt, 0, 60)
+        batch_test(MSI_spectral_bands, HSI_spectral_bands, opt, 5, 60)
