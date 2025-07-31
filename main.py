@@ -108,7 +108,14 @@ batch_log_path = "logs/csv/batch_logs.csv"
 epoch_log_path = "logs/csv/epoch_logs.csv"
 
 
-def train(epoch: int, optimizer: optim.Optimizer, scheduler: optim.lr_scheduler.LRScheduler):
+def train(
+    epoch: int,
+    model: nn.Module,
+    optimizer: optim.Optimizer,
+    scheduler: optim.lr_scheduler.LRScheduler,
+    criterion: nn.Module,
+    opt: Options,
+) -> float:
     # Setting up the logging
     log_file_path = f"logs/train_logs/train_{opt.nEpochs}_{opt.endEpochs}.log"
     sys.stdout = TeeLogger(log_file_path)
@@ -119,6 +126,8 @@ def train(epoch: int, optimizer: optim.Optimizer, scheduler: optim.lr_scheduler.
     global current_step
 
     model.train()
+
+    iteration = 1
     for iteration, batch in enumerate(training_data_loader, 1):
         # with torch.autograd.set_detect_anomaly(True):
         W, Y, Z, X = batch[0].cuda(), batch[1].cuda(), batch[2].cuda(), batch[3].cuda()
@@ -150,7 +159,7 @@ def train(epoch: int, optimizer: optim.Optimizer, scheduler: optim.lr_scheduler.
             logger.log_batch(epoch, iteration, round(loss.item(), 4))
             print("===> Epoch[{}]({}/{}): Loss: {:.4f}".format(epoch, iteration, len(training_data_loader), loss.item()))
 
-    avg_loss = round(epoch_loss / len(training_data_loader), 4)
+    avg_loss = round(epoch_loss / iteration, 4)
     logger.log_epoch(epoch, avg_loss)
     print("===> Epoch {} Complete: Avg. Loss: {:.4f}".format(epoch, avg_loss))
     timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
@@ -228,7 +237,7 @@ if __name__ == "__main__":
 
         if opt.mode == "train":
             for epoch in range(opt.nEpochs + 1, opt.endEpochs + 1):
-                avg_loss = train(epoch, optimizer, scheduler)
+                avg_loss = train(epoch, model, optimizer, scheduler, criterion, opt)
                 checkpoint(epoch)
                 scheduler.step()
         else:
