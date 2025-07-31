@@ -57,7 +57,7 @@ def build_model(msi_spectral_bands: int, hsi_spectral_bands: int, opt: Options):
     model = torch.nn.DataParallel(model).cuda()
 
     optimizer = optim.Adam(model.parameters(), lr=opt.lr)
-    scheduler = MultiStepLR(optimizer, milestones=[10, 30, 60, 120], gamma=0.5)
+    scheduler = MultiStepLR(optimizer, milestones=[10, 30, 60, 120], gamma=0.5, last_epoch=opt.nEpochs - 1)
     criterion = nn.L1Loss()
 
     print("===> Model successfully built")
