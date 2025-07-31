@@ -23,7 +23,7 @@ from ssim import MSSIM
 from datetime import datetime
 from torch.utils.tensorboard import SummaryWriter
 
-from test import TestOptions, test
+from test import TestOptions, batch_test, test
 
 
 # Training settings
@@ -84,28 +84,34 @@ def load_train():
 #     return testing_data_loader
 
 
-print("===> Building model")
+def build_model(msi_spectral_bands: int, hsi_spectral_bands: int, opt: TestOptions):
+    print("===> Building model")
+
+    model = S3RNet(msi_spectral_bands, hsi_spectral_bands, opt.upscale_factor).cuda()
+    print("# network parameters: {}".format(sum(param.numel() for param in model.parameters())))
+    model = torch.nn.DataParallel(model).cuda()
+
+    optimizer = optim.Adam(model.parameters(), lr=opt.lr)
+    scheduler = MultiStepLR(optimizer, milestones=[10, 30, 60, 120], gamma=0.5)
+    criterion = nn.L1Loss()
+
+    print("===> Model successfully built")
+
+    return model, optimizer, scheduler, criterion
 
 
-HSI_spectral_bands = 81
-MSI_spectral_bands = 40
-spatial_scale = 2
-model = S3RNet(MSI_spectral_bands, HSI_spectral_bands, spatial_scale).cuda()
-print("# network parameters: {}".format(sum(param.numel() for param in model.parameters())))
-model = torch.nn.DataParallel(model).cuda()
+def load_model(model: torch.nn.Module, optimizer, nEpochs: int, opt: TestOptions):
+    if nEpochs != 0:
+        print("===> Loading existing model")
 
+        load_dict = torch.load(opt.save_folder + "_epoch_{}.pth".format(opt.nEpochs))
+        opt.lr = load_dict["lr"]
+        epoch = load_dict["epoch"]
+        model.load_state_dict(load_dict["param"])
+        optimizer.load_state_dict(load_dict["adam"])
 
-optimizer = optim.Adam(model.parameters(), lr=opt.lr)
-scheduler = MultiStepLR(optimizer, milestones=[10, 30, 60, 120], gamma=0.5)
-
-if opt.nEpochs != 0:
-    load_dict = torch.load(opt.save_folder + "_epoch_{}.pth".format(opt.nEpochs))
-    opt.lr = load_dict["lr"]
-    epoch = load_dict["epoch"]
-    model.load_state_dict(load_dict["param"])
-    optimizer.load_state_dict(load_dict["adam"])
-
-criterion = nn.L1Loss()
+        print("===> Finished loading model")
+    return model, optimizer
 
 
 current_time = datetime.now().strftime("%b%d_%H-%M-%S")
@@ -134,6 +140,7 @@ epoch_log_path = "analytics/epoch_logs.csv"
 
 
 def train(epoch, optimizer, scheduler):
+    # Setting up the logging
     log_file_path = f"logs/train_logs/train_{opt.nEpochs}_{opt.endEpochs}.log"
     sys.stdout = TeeLogger(log_file_path)
     logger = CSVLogger(batch_log_path, epoch_log_path)
@@ -236,10 +243,21 @@ def checkpoint(epoch):
         print("Checkpoint saved to {}".format(model_out_path))
 
 
-if opt.mode == "train":
-    for epoch in range(opt.nEpochs + 1, opt.endEpochs + 1):
-        avg_loss = train(epoch, optimizer, scheduler)
-        checkpoint(epoch)
-        scheduler.step()
-else:
-    test(model, opt)
+HSI_spectral_bands = 81
+MSI_spectral_bands = 40
+spatial_scale = 2
+
+if __name__ == "__main__":
+    if opt.mode != "batch_test":
+        model, optimizer, scheduler, criterion = build_model(MSI_spectral_bands, HSI_spectral_bands, opt)
+        model, optimizer = load_model(model, optimizer, opt.nEpochs, opt)
+
+        if opt.mode == "train":
+            for epoch in range(opt.nEpochs + 1, opt.endEpochs + 1):
+                avg_loss = train(epoch, optimizer, scheduler)
+                checkpoint(epoch)
+                scheduler.step()
+        else:
+            test(model, opt)
+    else:
+        batch_test(MSI_spectral_bands, HSI_spectral_bands, opt, 0, 60)

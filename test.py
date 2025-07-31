@@ -11,6 +11,7 @@ from torch.utils.data import DataLoader
 
 from analytics.tee_logger import TeeLogger
 from data import get_test_set
+from main import build_model, load_model
 from psnr import MPSNR
 from ssim import MSSIM
 
@@ -189,3 +190,10 @@ def test(model: torch.nn.Module, opt: TestOptions) -> float:
     print("===> Overall Avg. SSIM: {:.4f}".format(avg_ssim / len(testing_data_loader)))
     print("===> Avg. time: {:.4f} s".format(avg_time / len(testing_data_loader)))
     return avg_psnr / len(testing_data_loader)
+
+
+def batch_test(msi_spectral_bands: int, hsi_spectral_bands: int, opt: TestOptions, start_epoch=0, end_epoch=150, step=5):
+    model, optimizer, scheduler, criterion = build_model(msi_spectral_bands, hsi_spectral_bands, opt)
+    for epoch in range(start_epoch + 1, end_epoch + 1, step):
+        model, optimizer = load_model(model, optimizer, epoch, opt)
+        test(model, opt)
