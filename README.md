@@ -38,7 +38,14 @@ python main.py --mode train --upscale_factor 2 --ChDim 81 --lr 0.01 --nEpochs 10
 Before testing, ensure that in `get_testing_set` of `data.py`, the correct folder is chosen.
 
 ```python
-python main.py --mode test --nEpochs 150
+python main.py --mode test --upscale_factor 2 --nEpochs 150
+```
+
+## Batch Test
+Before batch testing, ensure that in `get_testing_set` of `data.py`, the correct folder is chosen.
+
+```python
+python main.py --mode batch_test --upscale_factor 2
 ```
 
 
