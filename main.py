@@ -221,6 +221,11 @@ if __name__ == "__main__":
         model, optimizer, scheduler, criterion = build_model(MSI_spectral_bands, HSI_spectral_bands, opt)
         model, optimizer = load_model(model, optimizer, opt.nEpochs, opt)
 
+        # Simulate all previous LR drops up to opt.nEpochs
+        for _ in range(opt.nEpochs):
+            scheduler.step()
+        print(f"Continuing with Learning Rate: {scheduler.get_last_lr()}")
+
         if opt.mode == "train":
             for epoch in range(opt.nEpochs + 1, opt.endEpochs + 1):
                 avg_loss = train(epoch, optimizer, scheduler)
