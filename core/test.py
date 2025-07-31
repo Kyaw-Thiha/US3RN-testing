@@ -8,6 +8,7 @@ import torch.nn.functional as F
 import scipy.io as io
 from torch.utils.data import DataLoader
 
+from analytics.csv_test_logger import CSVTestLogger
 from analytics.tee_logger import TeeLogger
 from data import get_test_set
 from core.psnr import MPSNR
@@ -90,7 +91,7 @@ def reconstruct_from_patches(
     return output / count.clamp(min=1)
 
 
-def test(model: torch.nn.Module, opt: Options, print_patch: bool = True) -> float:
+def test(model: torch.nn.Module, opt: Options, print_patch: bool = True) -> Tuple[float, float]:
     """
     Tests the model using 64x64 patches of hyperspectral images and computes PSNR and SSIM.
 
@@ -170,10 +171,15 @@ def test(model: torch.nn.Module, opt: Options, print_patch: bool = True) -> floa
 
             io.savemat(opt.outputpath + os.path.basename(im_name[0]), {"HX": HX_full.permute(1, 2, 0).cpu().numpy()})
 
-    print("===> Overall Avg. PSNR: {:.4f} dB".format(avg_psnr / len(testing_data_loader)))
-    print("===> Overall Avg. SSIM: {:.4f}".format(avg_ssim / len(testing_data_loader)))
+    avg_psnr = round(avg_psnr / len(testing_data_loader), 4)
+    avg_ssim = round(avg_ssim / len(testing_data_loader), 4)
+    print("===> Overall Avg. PSNR: {:.4f} dB".format(avg_psnr))
+    print("===> Overall Avg. SSIM: {:.4f}".format(avg_ssim))
     print("===> Avg. time: {:.4f} s".format(avg_time / len(testing_data_loader)))
-    return avg_psnr / len(testing_data_loader)
+    return avg_psnr, avg_ssim
+
+
+log_path = "logs/csv/test.csv"
 
 
 def batch_test(
@@ -202,8 +208,13 @@ def batch_test(
     None
     """
     model, optimizer, scheduler, criterion = build_model(msi_spectral_bands, hsi_spectral_bands, opt)
+    logger = CSVTestLogger(log_path)
+
     for epoch in range(start_epoch, end_epoch + 1, step):
         print(f"\n Testing Epoch-{epoch}")
+
         model, optimizer = load_model(model, optimizer, epoch, opt)
-        test(model, opt, print_patch=False)
+        psnr, ssim = test(model, opt, print_patch=False)
+        logger.log_epoch(epoch, psnr, ssim)
+
         print("-----------------------------")

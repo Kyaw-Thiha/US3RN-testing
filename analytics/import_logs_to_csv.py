@@ -5,14 +5,14 @@
 
 import re
 
-from analytics.csv_logger import CSVLogger
+from analytics.csv_train_logger import CSVTrainLogger
 
 batch_log_file = "analytics/batch_logs.csv"
 epoch_log_file = "analytics/epoch_logs.csv"
 log_file = "logs/train_logs/train_10.log"
 
 
-def import_log_file(log_path: str, logger: CSVLogger) -> None:
+def import_log_file(log_path: str, logger: CSVTrainLogger) -> None:
     """
     Reads a training log file (e.g., train_10.log) and parses batch and epoch loss entries,
     saving them to the batch and epoch CSV logs.
@@ -41,7 +41,7 @@ def import_log_file(log_path: str, logger: CSVLogger) -> None:
 
 if __name__ == "__main__":
     print(f"Loading the Logger with {batch_log_file} and {epoch_log_file}")
-    logger = CSVLogger(batch_log_file, epoch_log_file)
+    logger = CSVTrainLogger(batch_log_file, epoch_log_file)
 
     print("Importing the logs from the .log file")
     import_log_file(log_file, logger)

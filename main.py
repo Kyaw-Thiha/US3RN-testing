@@ -13,7 +13,7 @@ import sys
 
 from torch.optim.lr_scheduler import StepLR, MultiStepLR
 from torch.utils.data import DataLoader
-from analytics.csv_logger import CSVLogger
+from analytics.csv_train_logger import CSVTrainLogger
 from analytics.tee_logger import TeeLogger
 from model import S3RNet
 from data import get_patch_training_set, get_test_set
@@ -104,15 +104,15 @@ mkdir(opt.save_folder)
 mkdir(opt.outputpath)
 
 
-batch_log_path = "analytics/batch_logs.csv"
-epoch_log_path = "analytics/epoch_logs.csv"
+batch_log_path = "logs/csv/batch_logs.csv"
+epoch_log_path = "logs/csv/epoch_logs.csv"
 
 
 def train(epoch: int, optimizer: optim.Optimizer, scheduler: optim.lr_scheduler.LRScheduler):
     # Setting up the logging
     log_file_path = f"logs/train_logs/train_{opt.nEpochs}_{opt.endEpochs}.log"
     sys.stdout = TeeLogger(log_file_path)
-    logger = CSVLogger(batch_log_path, epoch_log_path)
+    logger = CSVTrainLogger(batch_log_path, epoch_log_path)
 
     training_data_loader = load_train()
     epoch_loss = 0
