@@ -38,6 +38,7 @@ parser.add_argument("--endEpochs", type=int, default=160, help="number of epochs
 parser.add_argument("--lr", type=float, default=0.0001, help="Learning Rate. Default=0.01")
 parser.add_argument("--threads", type=int, default=2, help="number of threads for data loader to use")
 parser.add_argument("--seed", type=int, default=123, help="random seed to use. Default=123")
+parser.add_argument("--save_step", type=int, default=5, help="Frequency of checkpoints being saved")
 parser.add_argument("--save_folder", default="TrainedNet/", help="Directory to keep training outputs.")
 parser.add_argument("--outputpath", type=str, default="result/", help="Path to output img")
 parser.add_argument("--mode", default="test", help="Train or Test.")
@@ -209,7 +210,7 @@ def train(
 
 def checkpoint(epoch):
     model_out_path = opt.save_folder + "_epoch_{}.pth".format(epoch)
-    if epoch % 5 == 0:
+    if epoch % opt.save_step == 0:
         save_dict = dict(
             lr=optimizer.state_dict()["param_groups"][0]["lr"],
             param=model.state_dict(),

@@ -21,6 +21,7 @@ class Options:
     lr: float
     threads: int
     seed: int
+    save_step: int
     save_folder: str
     outputpath: str
     mode: str

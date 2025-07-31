@@ -33,6 +33,11 @@ python main.py --mode train --upscale_factor 2 --ChDim 81 --lr 0.01 --nEpochs 10
 python main.py --mode train --upscale_factor 2 --ChDim 81 --lr 0.01 --nEpochs 10 --endEpochs 50
 ```
 
+### Train (Custom Step)
+```python
+python main.py --mode train --upscale_factor 2 --ChDim 81 --lr 0.01 --save_step 1 --nEpochs 10 --endEpochs 20
+```
+-----
 
 ## Test
 Before testing, ensure that in `get_testing_set` of `data.py`, the correct folder is chosen.
@@ -47,7 +52,7 @@ Before batch testing, ensure that in `get_testing_set` of `data.py`, the correct
 ```python
 python main.py --mode batch_test --upscale_factor 2
 ```
-
+-----
 
 ### For logging out errors
 ```python
@@ -69,6 +74,7 @@ python -m preprocess.train
 ```bash
 python -m preprocess.test
 ```
+-----
 
 
 ## Analytics
