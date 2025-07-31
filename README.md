@@ -73,13 +73,17 @@ python -m preprocess.test
 
 ## Analytics
 By default, all training logs are saved in
-- `analytics/epoch_logs.csv` and `analytics/batch_logs.csv`
+- `logs/csv/epoch_logs.csv` and `logs/csv/batch_logs.csv`
 - `logs/train_logs/train_n_.log` for all printed outputs
 - Tensorboard logs at `tb_logger` folder
 
 ### Plotting logs
 ```python
-python -m analytics.plot_logs
+python -m analytics.plot_train
+```
+
+```python
+python -m analytics.plot_test
 ```
 
 ### Importing logs from .log file into .csv file
