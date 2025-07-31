@@ -124,11 +124,12 @@ def train(
 
     training_data_loader = load_train()
     epoch_loss = 0
+    total_samples = 0
+    iteration = 1
     global current_step
 
     model.train()
 
-    iteration = 1
     for iteration, batch in enumerate(training_data_loader, 1):
         # with torch.autograd.set_detect_anomaly(True):
         W, Y, Z, X = batch[0].cuda(), batch[1].cuda(), batch[2].cuda(), batch[3].cuda()
@@ -148,7 +149,8 @@ def train(
                 + 0.5 * alpha * criterion(Y, listY[i])
                 + 0.5 * alpha * criterion(Z, listZ[i])
             )
-        epoch_loss += loss.item()
+        epoch_loss += loss.item() * W.size(0)
+        total_samples += W.size(0)
 
         tb_logger.add_scalar("total_loss", loss.item(), current_step)
         current_step += 1
@@ -160,7 +162,7 @@ def train(
             logger.log_batch(epoch, iteration, round(loss.item(), 4))
             print("===> Epoch[{}]({}/{}): Loss: {:.4f}".format(epoch, iteration, len(training_data_loader), loss.item()))
 
-    avg_loss = round(epoch_loss / iteration, 4)
+    avg_loss = round(epoch_loss / total_samples, 4)
     logger.log_epoch(epoch, avg_loss)
     print("===> Epoch {} Complete: Avg. Loss: {:.4f}".format(epoch, avg_loss))
     timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
