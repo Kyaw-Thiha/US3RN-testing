@@ -23,10 +23,7 @@ cd Python-$PYTHON_VERSION
 make -j$(nproc)
 make altinstall # installs as python3.12 without overwriting system python
 
-echo "📁 Setting up project at $PROJECT_DIR..."
-git clone https://github.com/Kyaw-Thiha/US3RN-testing.git
-cd "$PROJECT_DIR"
-
+echo "📁 Activating the virtual environment at $PROJECT_DIR..."
 /usr/local/bin/python3.12 -m venv .env
 source .env/bin/activate
 
@@ -34,8 +31,8 @@ echo "⬆️ Upgrading pip..."
 curl -sS https://bootstrap.pypa.io/get-pip.py | python
 pip install --upgrade pip
 
-echo "Then activate the virtual environment and run:"
-echo "  source $VENV_DIR/bin/activate && pip install -r $PROJECT_DIR/requirements.txt"
+echo "Installing the requirements"
+pip install -r $PROJECT_DIR/requirements.txt
 
 echo "📂 Ready. Now upload your data:"
 echo ""
