@@ -12,7 +12,7 @@ echo "📦 Installing dependencies..."
 apt update && apt install -y \
   build-essential zlib1g-dev libssl-dev \
   libncurses-dev libffi-dev libsqlite3-dev \
-  libbz2-dev wget curl
+  libbz2-dev wget curl liblzma-dev
 
 echo "🐍 Installing Python $PYTHON_VERSION..."
 cd /tmp
