@@ -24,7 +24,8 @@ make -j$(nproc)
 make altinstall # installs as python3.12 without overwriting system python
 
 echo "📁 Activating the virtual environment at $PROJECT_DIR..."
-/usr/local/bin/python3.12 -m venv .env
+deactivate
+python3.12 -m venv .env
 source .env/bin/activate
 
 echo "⬆️ Upgrading pip..."
