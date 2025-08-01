@@ -46,19 +46,17 @@ Before testing, ensure that in `get_testing_set` of `data.py`, the correct folde
 python main.py --mode test --upscale_factor 2 --nEpochs 150
 ```
 
-## Batch Test
-Before batch testing, ensure that in `get_testing_set` of `data.py`, the correct folder is chosen.
-
+### Batch Test
 ```python
 python main.py --mode batch_test --upscale_factor 2
 ```
------
 
 ### For logging out errors
 ```python
 python main.py --mode test --nEpochs 152 > test_error.log 2>&1
 ```
 
+-----
 ## Dataset Preparation
 1. Create a folder called `data` in the root directory.
 2. Create a folder for each of the dataset, and add either `.mat` or `.npy` file into there.
@@ -75,7 +73,6 @@ python -m preprocess.train
 python -m preprocess.test
 ```
 -----
-
 
 ## Analytics
 By default, all training logs are saved in
@@ -99,4 +96,8 @@ Make sure to edit the log and csv file paths first in the python file before run
 python -m analytics.import_logs_to_csv
 ```
 
+## Setting up on Remote Server
+1. `chmod +x setup.sh`
+2. `./setup.sh`
+3. Run the training script
 
