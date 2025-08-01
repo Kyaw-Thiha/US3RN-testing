@@ -23,7 +23,9 @@ apt install -y python3.12 python3.12-venv python3.12-dev
 
 echo "📁 Setting up virtual environment at $VENV_DIR..."
 cd "$PROJECT_DIR"
-deactivate
+if [[ -n "$VIRTUAL_ENV" ]]; then
+  deactivate
+fi
 rm -rf .env
 python3.12 -m venv .env
 source .env/bin/activate
