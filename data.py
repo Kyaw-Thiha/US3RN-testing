@@ -24,7 +24,7 @@ def input_transform():
 
 def get_patch_training_set(upscale_factor, patch_size):
     # root_dir = "/data/mq/data/CAVEdata/"
-    root_dir = "data/cuprite"
+    root_dir = "data/train-4"
     train_dir1 = join(root_dir, "train/X")
     train_dir2 = join(root_dir, "train/Y")
 
