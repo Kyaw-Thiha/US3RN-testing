@@ -14,7 +14,7 @@ def change_key(input_dir: str, output_dir: str, new_key: str):
 
     Operations:
     - Load the image from .mat, .npy or .tif file.
-    - Transpose from (H, W, C) to (C, H, W) if 3D.
+    - Transpose from to (H, W, C) if 3D.
     - Save the result as .mat with `new_key` as the variable name.
 
     Note that
@@ -39,6 +39,10 @@ def change_key(input_dir: str, output_dir: str, new_key: str):
         if img is None:
             print(f"[!] Warning: No valid array found in {fname}")
             continue
+        print(f"Transposed shape (C, H, W): {img.shape}")
+        # print(f"First 1 elements of C: {img[0][0]}")
+        # print(f"First 1 elements of H: {img[1][0]}")
+        # print(f"First 1 elements of W: {img[2][0]}")
 
         output_fname = os.path.splitext(fname)[0] + ".mat"
         savemat(
@@ -68,9 +72,8 @@ def process_mat(img_path: str):
         if isinstance(value, np.ndarray):
             img = data.get(key)
 
-            if img is not None and img.ndim == 3:
-                img = img.transpose(2, 0, 1)
-                print(f"Transposed shape: {img.shape}")
+            # if img is not None and img.ndim == 3:
+            #     img = img.transpose(2, 0, 1)
             return img
     print(f"[❌] Error: No valid key found in {img_path}")
 
@@ -87,8 +90,7 @@ def process_npy(img_path: str):
     """
     img = np.load(img_path)
     if img.ndim == 3:
-        img = img.transpose(2, 0, 1)
-        print(f"Transposed shape: {img.shape}")
+        # img = img.transpose(2, 0, 1)
         return img
     print(f"[❌] Error: Array shape is wrong in {img_path}")
 
@@ -106,11 +108,13 @@ def process_tif(img_path: str) -> Optional[np.ndarray]:
     img = tifffile.imread(img_path)
     if img.ndim == 3:
         # Case: (H, W, C) -> (C, H, W)
-        if img.shape[2] < 1000:  # likely channels last
-            img = img.transpose(2, 0, 1)
-            print(f"Transposed shape: {img.shape}")
-        else:
-            print(f"[✅] Already in (C, H, W) shape: {img.shape}")
+        # if img.shape[2] < 1000:  # likely channels last
+        #     img = img.transpose(2, 0, 1)
+        # else:
+        #     print(f"[✅] Already in (C, H, W) shape: {img.shape}")
+
+        # (C, H, W) -> (H, W, C)
+        img = img.transpose(1, 2, 0)
         return img
     else:
         print(f"[❌] Error: Unexpected array shape {img.shape} in {img_path}")

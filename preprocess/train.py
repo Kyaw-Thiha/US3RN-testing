@@ -3,10 +3,10 @@ from preprocess.downsample import load_downsample_save
 
 
 FILE_PATH = "data"
-data_src = "cuprite"
+data_src = "train-4"
 HSI_spectral_bands = 81
 MSI_spectral_bands = 40
-spatial_target = 512
+spatial_factor = 64
 
 
 def main(base_dir: str):
@@ -16,26 +16,27 @@ def main(base_dir: str):
     print("-------------------------------------")
 
     print(
-        f"Downsampling the files from {base_dir}/train/X to {HSI_spectral_bands} spectral bands and {spatial_target} spatial resolution"
+        f"Downsampling the files from {base_dir}/train/X to {HSI_spectral_bands} spectral bands and {spatial_factor} spatial factor"
     )
     load_downsample_save(
         f"{base_dir}/train/X",
         f"{base_dir}/train/X",
         "msi",
         spectral_algorithm="pca",
-        # target_size=(spatial_target, spatial_target),
+        spatial_factor=spatial_factor,
         out_bands=HSI_spectral_bands,
     )
     print("-------------------------------------")
 
     print(
-        f"Downsampling the files from {base_dir}/train/Y to {MSI_spectral_bands} spectral bands and {spatial_target} spatial resolution"
+        f"Downsampling the files from {base_dir}/train/Y to {MSI_spectral_bands} spectral bands and {spatial_factor} spatial factor"
     )
     load_downsample_save(
         f"{base_dir}/train/Y",
         f"{base_dir}/train/Y",
         "RGB",
         spectral_algorithm="pca",
+        spatial_factor=spatial_factor,
         out_bands=MSI_spectral_bands,
     )
     print("-------------------------------------")

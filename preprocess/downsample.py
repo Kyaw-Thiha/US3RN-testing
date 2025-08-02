@@ -12,6 +12,7 @@ def load_downsample_save(
     output_dir: str,
     key: str,
     spatial_scale: float = 1,
+    spatial_factor: float = -1,
     spectral_scale: float = 1,
     spectral_algorithm="uniform",
     target_size: tuple[int, int] = (-1, -1),
@@ -46,7 +47,23 @@ def load_downsample_save(
             continue
         data = loadmat(os.path.join(input_dir, fname))
         img = data.get(key)
-        img = downsample(img, spatial_scale, spectral_scale, spectral_algorithm, target_size, out_bands)
+
+        target_h, target_w = target_size
+        if img is not None and target_h < 0 and target_w < 0:
+            if spatial_factor > 1:
+                target_h = img.shape[0] // spatial_factor * spatial_factor
+                target_w = img.shape[1] // spatial_factor * spatial_factor
+            else:
+                target_h = img.shape[0] // spatial_scale
+                target_w = img.shape[1] // spatial_scale
+
+        new_target_size = (target_h, target_w)
+
+        new_out_bands = out_bands
+        if img is not None and spectral_scale < 0:
+            new_out_bands = img[2] // spectral_scale
+
+        img = downsample(img, new_target_size, new_out_bands, spectral_algorithm)
 
         if img is None:
             print(f"[✗] There was an error when downsampling {fname}")
@@ -72,25 +89,21 @@ def load_downsample_save(
 
 def downsample(
     img,
-    spatial_scale: float = 1,
-    spectral_scale: float = 1,
-    spectral_algorithm="uniform",
     target_size: tuple[int, int] = (-1, -1),
     out_bands: int = -1,
+    spectral_algorithm="uniform",
 ):
     """
     A function that downsample the given image by given spatial & spectral scales
     Parameters:
     - img: h x w x s image file
-    - spatial_scale (float): how much scale to downsample on spatial level
-    - spectral_scale (float): how much scale to downsample on spectral level
+    - target_size: (target_h, target_w) to resize to directly. (-1, -1) indicates using spatial_scale instead.
+    - out_bands (int): spectral band to downsample to when using pca. -1 indicates using spectral_scale instead.
+      Only used for pca
     - spectral_algorithm: what algorithm to use for spectral downsampling
       "uniform" - Sample every 'spectral_scale' time
       "pca" - Sample using Principal Component Analysis (Retains spectral bands with most effect on data)
       "camera" - Simulate to response function of a camera (Nikon D700 expects 31 spectral bands, return 3)
-    - target_size: (target_h, target_w) to resize to directly. (-1, -1) indicates using spatial_scale instead.
-    - out_bands (int): spectral band to downsample to when using pca. -1 indicates using spectral_scale instead.
-      Only used for pca
     """
     if spectral_algorithm != "uniform" and spectral_algorithm != "pca" and spectral_algorithm != "camera":
         print("Error: Invalid Spectral Algorithm")
@@ -100,11 +113,6 @@ def downsample(
 
     # Downsample spatially
     new_h, new_w = target_size
-    if new_h == -1:
-        new_h = h // spatial_scale
-    if new_w == -1:
-        new_w = w // spatial_scale
-
     lowres = np.zeros((new_h, new_w, c), dtype=np.float32)
     for i in range(c):
         band = img[:, :, i]
@@ -118,18 +126,16 @@ def downsample(
     # Downsample spectrally
     if spectral_algorithm == "uniform":
         # 1. Uniformly sample every spectral_scale-th band
-        if out_bands < 0:
-            # fallback to current spectral_scale
-            lowres = lowres[:, :, ::spectral_scale]
-        else:
-            C = lowres.shape[2]
-            # Compute indices spaced evenly from 0 to C-1 for out_bands
-            indices = np.linspace(0, C - 1, out_bands, dtype=int)
-            lowres = lowres[:, :, indices]
+        # if out_bands < 0:
+        #     # fallback to current spectral_scale
+        #     lowres = lowres[:, :, ::spectral_scale]
+
+        C = lowres.shape[2]
+        # Compute indices spaced evenly from 0 to C-1 for out_bands
+        indices = np.linspace(0, C - 1, out_bands, dtype=int)
+        lowres = lowres[:, :, indices]
     elif spectral_algorithm == "pca":
         # 2. PCA-based spectral downsampling
-        if out_bands < 0:
-            out_bands = c // spectral_scale
         H, W, C = lowres.shape
         reshaped = lowres.reshape(-1, C)  # shape: (H*W, C)
         pca = PCA(n_components=out_bands)
