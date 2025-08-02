@@ -246,4 +246,4 @@ if __name__ == "__main__":
         else:
             test(model, opt)
     else:
-        batch_test(MSI_spectral_bands, HSI_spectral_bands, opt, 5, 60)
+        batch_test(MSI_spectral_bands, HSI_spectral_bands, opt, 30, 45, 1)
