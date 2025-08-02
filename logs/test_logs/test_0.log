@@ -2506,3 +2506,3619 @@
 ===> Overall Avg. SSIM: 0.8722
 ===> Avg. time: 0.5766 s
 -----------------------------
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 13.2295 dB
+===> Overall Avg. SSIM: 0.2597
+===> Avg. time: 2.5970 s
+-----------------------------
+
+ Testing Epoch-5
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 18.1371 dB
+===> Overall Avg. SSIM: 0.8610
+===> Avg. time: 0.9814 s
+-----------------------------
+
+ Testing Epoch-10
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 18.1371 dB
+===> Overall Avg. SSIM: 0.8610
+===> Avg. time: 0.9814 s
+-----------------------------
+
+ Testing Epoch-10
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 25.8083 dB
+===> Overall Avg. SSIM: 0.9425
+===> Avg. time: 0.8731 s
+-----------------------------
+
+ Testing Epoch-15
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 25.8083 dB
+===> Overall Avg. SSIM: 0.9425
+===> Avg. time: 0.8731 s
+-----------------------------
+
+ Testing Epoch-15
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 25.8083 dB
+===> Overall Avg. SSIM: 0.9425
+===> Avg. time: 0.8731 s
+-----------------------------
+
+ Testing Epoch-15
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.1826 dB
+===> Overall Avg. SSIM: 0.9378
+===> Avg. time: 0.8812 s
+-----------------------------
+
+ Testing Epoch-20
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.1826 dB
+===> Overall Avg. SSIM: 0.9378
+===> Avg. time: 0.8812 s
+-----------------------------
+
+ Testing Epoch-20
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.1826 dB
+===> Overall Avg. SSIM: 0.9378
+===> Avg. time: 0.8812 s
+-----------------------------
+
+ Testing Epoch-20
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.1826 dB
+===> Overall Avg. SSIM: 0.9378
+===> Avg. time: 0.8812 s
+-----------------------------
+
+ Testing Epoch-20
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 26.0543 dB
+===> Overall Avg. SSIM: 0.9459
+===> Avg. time: 0.8882 s
+-----------------------------
+
+ Testing Epoch-25
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 26.0543 dB
+===> Overall Avg. SSIM: 0.9459
+===> Avg. time: 0.8882 s
+-----------------------------
+
+ Testing Epoch-25
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 26.0543 dB
+===> Overall Avg. SSIM: 0.9459
+===> Avg. time: 0.8882 s
+-----------------------------
+
+ Testing Epoch-25
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 26.0543 dB
+===> Overall Avg. SSIM: 0.9459
+===> Avg. time: 0.8882 s
+-----------------------------
+
+ Testing Epoch-25
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 26.0543 dB
+===> Overall Avg. SSIM: 0.9459
+===> Avg. time: 0.8882 s
+-----------------------------
+
+ Testing Epoch-25
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.1167 dB
+===> Overall Avg. SSIM: 0.9317
+===> Avg. time: 0.8811 s
+-----------------------------
+
+ Testing Epoch-30
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.1167 dB
+===> Overall Avg. SSIM: 0.9317
+===> Avg. time: 0.8811 s
+-----------------------------
+
+ Testing Epoch-30
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.1167 dB
+===> Overall Avg. SSIM: 0.9317
+===> Avg. time: 0.8811 s
+-----------------------------
+
+ Testing Epoch-30
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.1167 dB
+===> Overall Avg. SSIM: 0.9317
+===> Avg. time: 0.8811 s
+-----------------------------
+
+ Testing Epoch-30
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.1167 dB
+===> Overall Avg. SSIM: 0.9317
+===> Avg. time: 0.8811 s
+-----------------------------
+
+ Testing Epoch-30
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.1167 dB
+===> Overall Avg. SSIM: 0.9317
+===> Avg. time: 0.8811 s
+-----------------------------
+
+ Testing Epoch-30
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 25.5545 dB
+===> Overall Avg. SSIM: 0.9464
+===> Avg. time: 0.8832 s
+-----------------------------
+
+ Testing Epoch-35
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 25.5545 dB
+===> Overall Avg. SSIM: 0.9464
+===> Avg. time: 0.8832 s
+-----------------------------
+
+ Testing Epoch-35
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 25.5545 dB
+===> Overall Avg. SSIM: 0.9464
+===> Avg. time: 0.8832 s
+-----------------------------
+
+ Testing Epoch-35
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 25.5545 dB
+===> Overall Avg. SSIM: 0.9464
+===> Avg. time: 0.8832 s
+-----------------------------
+
+ Testing Epoch-35
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 25.5545 dB
+===> Overall Avg. SSIM: 0.9464
+===> Avg. time: 0.8832 s
+-----------------------------
+
+ Testing Epoch-35
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 25.5545 dB
+===> Overall Avg. SSIM: 0.9464
+===> Avg. time: 0.8832 s
+-----------------------------
+
+ Testing Epoch-35
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 25.5545 dB
+===> Overall Avg. SSIM: 0.9464
+===> Avg. time: 0.8832 s
+-----------------------------
+
+ Testing Epoch-35
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.0636 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 0.8853 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.0636 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 0.8853 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.0636 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 0.8853 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.0636 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 0.8853 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.0636 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 0.8853 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.0636 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 0.8853 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.0636 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 0.8853 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.0636 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 0.8853 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9292 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 1.8227 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9292 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 1.8227 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9292 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 1.8227 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9292 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 1.8227 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9292 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 1.8227 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9292 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 1.8227 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9292 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 1.8227 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9292 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 1.8227 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9292 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 1.8227 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.1120 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 1.8163 s
+-----------------------------
+
+ Testing Epoch-50
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.1120 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 1.8163 s
+-----------------------------
+
+ Testing Epoch-50
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.1120 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 1.8163 s
+-----------------------------
+
+ Testing Epoch-50
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.1120 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 1.8163 s
+-----------------------------
+
+ Testing Epoch-50
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.1120 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 1.8163 s
+-----------------------------
+
+ Testing Epoch-50
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.1120 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 1.8163 s
+-----------------------------
+
+ Testing Epoch-50
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.1120 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 1.8163 s
+-----------------------------
+
+ Testing Epoch-50
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.1120 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 1.8163 s
+-----------------------------
+
+ Testing Epoch-50
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.1120 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 1.8163 s
+-----------------------------
+
+ Testing Epoch-50
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.1120 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 1.8163 s
+-----------------------------
+
+ Testing Epoch-50
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.2458 dB
+===> Overall Avg. SSIM: 0.9415
+===> Avg. time: 1.8158 s
+-----------------------------
+===> Overall Avg. PSNR: 27.2458 dB
+===> Overall Avg. SSIM: 0.9415
+===> Avg. time: 1.8158 s
+-----------------------------
+===> Overall Avg. PSNR: 27.2458 dB
+===> Overall Avg. SSIM: 0.9415
+===> Avg. time: 1.8158 s
+-----------------------------
+===> Overall Avg. PSNR: 27.2458 dB
+===> Overall Avg. SSIM: 0.9415
+===> Avg. time: 1.8158 s
+-----------------------------
+===> Overall Avg. PSNR: 27.2458 dB
+===> Overall Avg. SSIM: 0.9415
+===> Avg. time: 1.8158 s
+-----------------------------
+===> Overall Avg. PSNR: 27.2458 dB
+===> Overall Avg. SSIM: 0.9415
+===> Avg. time: 1.8158 s
+-----------------------------
+===> Overall Avg. PSNR: 27.2458 dB
+===> Overall Avg. SSIM: 0.9415
+===> Avg. time: 1.8158 s
+-----------------------------
+===> Overall Avg. PSNR: 27.2458 dB
+===> Overall Avg. SSIM: 0.9415
+===> Avg. time: 1.8158 s
+-----------------------------
+===> Overall Avg. PSNR: 27.2458 dB
+===> Overall Avg. SSIM: 0.9415
+===> Avg. time: 1.8158 s
+-----------------------------
+===> Overall Avg. PSNR: 27.2458 dB
+===> Overall Avg. SSIM: 0.9415
+===> Avg. time: 1.8158 s
+-----------------------------
+===> Overall Avg. PSNR: 27.2458 dB
+===> Overall Avg. SSIM: 0.9415
+===> Avg. time: 1.8158 s
+-----------------------------
+===> Loading test datasets
+===> Overall Avg. PSNR: 25.5545 dB
+===> Overall Avg. SSIM: 0.9464
+===> Avg. time: 1.2367 s
+-----------------------------
+
+ Testing Epoch-31
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.0023 dB
+===> Overall Avg. SSIM: 0.9395
+===> Avg. time: 0.8790 s
+-----------------------------
+
+ Testing Epoch-32
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.0023 dB
+===> Overall Avg. SSIM: 0.9395
+===> Avg. time: 0.8790 s
+-----------------------------
+
+ Testing Epoch-32
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9346 dB
+===> Overall Avg. SSIM: 0.9387
+===> Avg. time: 0.8813 s
+-----------------------------
+
+ Testing Epoch-33
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9346 dB
+===> Overall Avg. SSIM: 0.9387
+===> Avg. time: 0.8813 s
+-----------------------------
+
+ Testing Epoch-33
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9346 dB
+===> Overall Avg. SSIM: 0.9387
+===> Avg. time: 0.8813 s
+-----------------------------
+
+ Testing Epoch-33
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9651 dB
+===> Overall Avg. SSIM: 0.9400
+===> Avg. time: 0.8767 s
+-----------------------------
+
+ Testing Epoch-34
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9651 dB
+===> Overall Avg. SSIM: 0.9400
+===> Avg. time: 0.8767 s
+-----------------------------
+
+ Testing Epoch-34
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9651 dB
+===> Overall Avg. SSIM: 0.9400
+===> Avg. time: 0.8767 s
+-----------------------------
+
+ Testing Epoch-34
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9651 dB
+===> Overall Avg. SSIM: 0.9400
+===> Avg. time: 0.8767 s
+-----------------------------
+
+ Testing Epoch-34
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.2553 dB
+===> Overall Avg. SSIM: 0.9400
+===> Avg. time: 0.8799 s
+-----------------------------
+
+ Testing Epoch-35
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.2553 dB
+===> Overall Avg. SSIM: 0.9400
+===> Avg. time: 0.8799 s
+-----------------------------
+
+ Testing Epoch-35
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.2553 dB
+===> Overall Avg. SSIM: 0.9400
+===> Avg. time: 0.8799 s
+-----------------------------
+
+ Testing Epoch-35
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.2553 dB
+===> Overall Avg. SSIM: 0.9400
+===> Avg. time: 0.8799 s
+-----------------------------
+
+ Testing Epoch-35
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.2553 dB
+===> Overall Avg. SSIM: 0.9400
+===> Avg. time: 0.8799 s
+-----------------------------
+
+ Testing Epoch-35
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.0636 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 0.8714 s
+-----------------------------
+
+ Testing Epoch-36
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.0636 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 0.8714 s
+-----------------------------
+
+ Testing Epoch-36
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.0636 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 0.8714 s
+-----------------------------
+
+ Testing Epoch-36
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.0636 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 0.8714 s
+-----------------------------
+
+ Testing Epoch-36
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.0636 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 0.8714 s
+-----------------------------
+
+ Testing Epoch-36
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.0636 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 0.8714 s
+-----------------------------
+
+ Testing Epoch-36
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 26.9369 dB
+===> Overall Avg. SSIM: 0.9420
+===> Avg. time: 0.8815 s
+-----------------------------
+
+ Testing Epoch-37
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 26.9369 dB
+===> Overall Avg. SSIM: 0.9420
+===> Avg. time: 0.8815 s
+-----------------------------
+
+ Testing Epoch-37
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 26.9369 dB
+===> Overall Avg. SSIM: 0.9420
+===> Avg. time: 0.8815 s
+-----------------------------
+
+ Testing Epoch-37
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 26.9369 dB
+===> Overall Avg. SSIM: 0.9420
+===> Avg. time: 0.8815 s
+-----------------------------
+
+ Testing Epoch-37
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 26.9369 dB
+===> Overall Avg. SSIM: 0.9420
+===> Avg. time: 0.8815 s
+-----------------------------
+
+ Testing Epoch-37
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 26.9369 dB
+===> Overall Avg. SSIM: 0.9420
+===> Avg. time: 0.8815 s
+-----------------------------
+
+ Testing Epoch-37
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 26.9369 dB
+===> Overall Avg. SSIM: 0.9420
+===> Avg. time: 0.8815 s
+-----------------------------
+
+ Testing Epoch-37
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.5274 dB
+===> Overall Avg. SSIM: 0.9396
+===> Avg. time: 0.8744 s
+-----------------------------
+
+ Testing Epoch-38
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.5274 dB
+===> Overall Avg. SSIM: 0.9396
+===> Avg. time: 0.8744 s
+-----------------------------
+
+ Testing Epoch-38
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.5274 dB
+===> Overall Avg. SSIM: 0.9396
+===> Avg. time: 0.8744 s
+-----------------------------
+
+ Testing Epoch-38
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.5274 dB
+===> Overall Avg. SSIM: 0.9396
+===> Avg. time: 0.8744 s
+-----------------------------
+
+ Testing Epoch-38
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.5274 dB
+===> Overall Avg. SSIM: 0.9396
+===> Avg. time: 0.8744 s
+-----------------------------
+
+ Testing Epoch-38
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.5274 dB
+===> Overall Avg. SSIM: 0.9396
+===> Avg. time: 0.8744 s
+-----------------------------
+
+ Testing Epoch-38
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.5274 dB
+===> Overall Avg. SSIM: 0.9396
+===> Avg. time: 0.8744 s
+-----------------------------
+
+ Testing Epoch-38
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.5274 dB
+===> Overall Avg. SSIM: 0.9396
+===> Avg. time: 0.8744 s
+-----------------------------
+
+ Testing Epoch-38
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.8070 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8767 s
+-----------------------------
+
+ Testing Epoch-39
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.8070 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8767 s
+-----------------------------
+
+ Testing Epoch-39
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.8070 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8767 s
+-----------------------------
+
+ Testing Epoch-39
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.8070 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8767 s
+-----------------------------
+
+ Testing Epoch-39
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.8070 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8767 s
+-----------------------------
+
+ Testing Epoch-39
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.8070 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8767 s
+-----------------------------
+
+ Testing Epoch-39
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.8070 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8767 s
+-----------------------------
+
+ Testing Epoch-39
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.8070 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8767 s
+-----------------------------
+
+ Testing Epoch-39
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.8070 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8767 s
+-----------------------------
+
+ Testing Epoch-39
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9251 dB
+===> Overall Avg. SSIM: 0.9403
+===> Avg. time: 0.8709 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9251 dB
+===> Overall Avg. SSIM: 0.9403
+===> Avg. time: 0.8709 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9251 dB
+===> Overall Avg. SSIM: 0.9403
+===> Avg. time: 0.8709 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9251 dB
+===> Overall Avg. SSIM: 0.9403
+===> Avg. time: 0.8709 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9251 dB
+===> Overall Avg. SSIM: 0.9403
+===> Avg. time: 0.8709 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9251 dB
+===> Overall Avg. SSIM: 0.9403
+===> Avg. time: 0.8709 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9251 dB
+===> Overall Avg. SSIM: 0.9403
+===> Avg. time: 0.8709 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9251 dB
+===> Overall Avg. SSIM: 0.9403
+===> Avg. time: 0.8709 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9251 dB
+===> Overall Avg. SSIM: 0.9403
+===> Avg. time: 0.8709 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9251 dB
+===> Overall Avg. SSIM: 0.9403
+===> Avg. time: 0.8709 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9292 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 0.8778 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9292 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 0.8778 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9292 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 0.8778 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9292 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 0.8778 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9292 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 0.8778 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9292 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 0.8778 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9292 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 0.8778 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9292 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 0.8778 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9292 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 0.8778 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9292 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 0.8778 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9292 dB
+===> Overall Avg. SSIM: 0.9406
+===> Avg. time: 0.8778 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.2602 dB
+===> Overall Avg. SSIM: 0.9410
+===> Avg. time: 0.8762 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.2602 dB
+===> Overall Avg. SSIM: 0.9410
+===> Avg. time: 0.8762 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.2602 dB
+===> Overall Avg. SSIM: 0.9410
+===> Avg. time: 0.8762 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.2602 dB
+===> Overall Avg. SSIM: 0.9410
+===> Avg. time: 0.8762 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.2602 dB
+===> Overall Avg. SSIM: 0.9410
+===> Avg. time: 0.8762 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.2602 dB
+===> Overall Avg. SSIM: 0.9410
+===> Avg. time: 0.8762 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.2602 dB
+===> Overall Avg. SSIM: 0.9410
+===> Avg. time: 0.8762 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.2602 dB
+===> Overall Avg. SSIM: 0.9410
+===> Avg. time: 0.8762 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.2602 dB
+===> Overall Avg. SSIM: 0.9410
+===> Avg. time: 0.8762 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.2602 dB
+===> Overall Avg. SSIM: 0.9410
+===> Avg. time: 0.8762 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.2602 dB
+===> Overall Avg. SSIM: 0.9410
+===> Avg. time: 0.8762 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.2602 dB
+===> Overall Avg. SSIM: 0.9410
+===> Avg. time: 0.8762 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9144 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8701 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9144 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8701 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9144 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8701 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9144 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8701 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9144 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8701 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9144 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8701 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9144 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8701 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9144 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8701 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9144 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8701 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9144 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8701 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9144 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8701 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9144 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8701 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.9144 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8701 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.1765 dB
+===> Overall Avg. SSIM: 0.9418
+===> Avg. time: 0.8773 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.1765 dB
+===> Overall Avg. SSIM: 0.9418
+===> Avg. time: 0.8773 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.1765 dB
+===> Overall Avg. SSIM: 0.9418
+===> Avg. time: 0.8773 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.1765 dB
+===> Overall Avg. SSIM: 0.9418
+===> Avg. time: 0.8773 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.1765 dB
+===> Overall Avg. SSIM: 0.9418
+===> Avg. time: 0.8773 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.1765 dB
+===> Overall Avg. SSIM: 0.9418
+===> Avg. time: 0.8773 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.1765 dB
+===> Overall Avg. SSIM: 0.9418
+===> Avg. time: 0.8773 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.1765 dB
+===> Overall Avg. SSIM: 0.9418
+===> Avg. time: 0.8773 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.1765 dB
+===> Overall Avg. SSIM: 0.9418
+===> Avg. time: 0.8773 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.1765 dB
+===> Overall Avg. SSIM: 0.9418
+===> Avg. time: 0.8773 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.1765 dB
+===> Overall Avg. SSIM: 0.9418
+===> Avg. time: 0.8773 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.1765 dB
+===> Overall Avg. SSIM: 0.9418
+===> Avg. time: 0.8773 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.1765 dB
+===> Overall Avg. SSIM: 0.9418
+===> Avg. time: 0.8773 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.1765 dB
+===> Overall Avg. SSIM: 0.9418
+===> Avg. time: 0.8773 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.6437 dB
+===> Overall Avg. SSIM: 0.9420
+===> Avg. time: 0.8716 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.6437 dB
+===> Overall Avg. SSIM: 0.9420
+===> Avg. time: 0.8716 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.6437 dB
+===> Overall Avg. SSIM: 0.9420
+===> Avg. time: 0.8716 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.6437 dB
+===> Overall Avg. SSIM: 0.9420
+===> Avg. time: 0.8716 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.6437 dB
+===> Overall Avg. SSIM: 0.9420
+===> Avg. time: 0.8716 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.6437 dB
+===> Overall Avg. SSIM: 0.9420
+===> Avg. time: 0.8716 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.6437 dB
+===> Overall Avg. SSIM: 0.9420
+===> Avg. time: 0.8716 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.6437 dB
+===> Overall Avg. SSIM: 0.9420
+===> Avg. time: 0.8716 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.6437 dB
+===> Overall Avg. SSIM: 0.9420
+===> Avg. time: 0.8716 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.6437 dB
+===> Overall Avg. SSIM: 0.9420
+===> Avg. time: 0.8716 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.6437 dB
+===> Overall Avg. SSIM: 0.9420
+===> Avg. time: 0.8716 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.6437 dB
+===> Overall Avg. SSIM: 0.9420
+===> Avg. time: 0.8716 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.6437 dB
+===> Overall Avg. SSIM: 0.9420
+===> Avg. time: 0.8716 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.6437 dB
+===> Overall Avg. SSIM: 0.9420
+===> Avg. time: 0.8716 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 27.6437 dB
+===> Overall Avg. SSIM: 0.9420
+===> Avg. time: 0.8716 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 28.1120 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8844 s
+-----------------------------
+===> Overall Avg. PSNR: 28.1120 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8844 s
+-----------------------------
+===> Overall Avg. PSNR: 28.1120 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8844 s
+-----------------------------
+===> Overall Avg. PSNR: 28.1120 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8844 s
+-----------------------------
+===> Overall Avg. PSNR: 28.1120 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8844 s
+-----------------------------
+===> Overall Avg. PSNR: 28.1120 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8844 s
+-----------------------------
+===> Overall Avg. PSNR: 28.1120 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8844 s
+-----------------------------
+===> Overall Avg. PSNR: 28.1120 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8844 s
+-----------------------------
+===> Overall Avg. PSNR: 28.1120 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8844 s
+-----------------------------
+===> Overall Avg. PSNR: 28.1120 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8844 s
+-----------------------------
+===> Overall Avg. PSNR: 28.1120 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8844 s
+-----------------------------
+===> Overall Avg. PSNR: 28.1120 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8844 s
+-----------------------------
+===> Overall Avg. PSNR: 28.1120 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8844 s
+-----------------------------
+===> Overall Avg. PSNR: 28.1120 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8844 s
+-----------------------------
+===> Overall Avg. PSNR: 28.1120 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8844 s
+-----------------------------
+===> Overall Avg. PSNR: 28.1120 dB
+===> Overall Avg. SSIM: 0.9407
+===> Avg. time: 0.8844 s
+-----------------------------
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.8065 dB
+===> Overall Avg. SSIM: 0.8200
+===> Avg. time: 1.4513 s
+-----------------------------
+
+ Testing Epoch-31
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.3254 dB
+===> Overall Avg. SSIM: 0.7589
+===> Avg. time: 0.5968 s
+-----------------------------
+
+ Testing Epoch-32
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.3254 dB
+===> Overall Avg. SSIM: 0.7589
+===> Avg. time: 0.5968 s
+-----------------------------
+
+ Testing Epoch-32
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 26.6471 dB
+===> Overall Avg. SSIM: 0.9120
+===> Avg. time: 0.5975 s
+-----------------------------
+
+ Testing Epoch-33
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 26.6471 dB
+===> Overall Avg. SSIM: 0.9120
+===> Avg. time: 0.5975 s
+-----------------------------
+
+ Testing Epoch-33
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 26.6471 dB
+===> Overall Avg. SSIM: 0.9120
+===> Avg. time: 0.5975 s
+-----------------------------
+
+ Testing Epoch-33
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.1789 dB
+===> Overall Avg. SSIM: 0.8953
+===> Avg. time: 0.5922 s
+-----------------------------
+
+ Testing Epoch-34
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.1789 dB
+===> Overall Avg. SSIM: 0.8953
+===> Avg. time: 0.5922 s
+-----------------------------
+
+ Testing Epoch-34
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.1789 dB
+===> Overall Avg. SSIM: 0.8953
+===> Avg. time: 0.5922 s
+-----------------------------
+
+ Testing Epoch-34
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.1789 dB
+===> Overall Avg. SSIM: 0.8953
+===> Avg. time: 0.5922 s
+-----------------------------
+
+ Testing Epoch-34
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 17.2879 dB
+===> Overall Avg. SSIM: 0.8304
+===> Avg. time: 0.5945 s
+-----------------------------
+
+ Testing Epoch-35
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 17.2879 dB
+===> Overall Avg. SSIM: 0.8304
+===> Avg. time: 0.5945 s
+-----------------------------
+
+ Testing Epoch-35
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 17.2879 dB
+===> Overall Avg. SSIM: 0.8304
+===> Avg. time: 0.5945 s
+-----------------------------
+
+ Testing Epoch-35
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 17.2879 dB
+===> Overall Avg. SSIM: 0.8304
+===> Avg. time: 0.5945 s
+-----------------------------
+
+ Testing Epoch-35
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 17.2879 dB
+===> Overall Avg. SSIM: 0.8304
+===> Avg. time: 0.5945 s
+-----------------------------
+
+ Testing Epoch-35
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 16.6631 dB
+===> Overall Avg. SSIM: 0.8084
+===> Avg. time: 0.5926 s
+-----------------------------
+
+ Testing Epoch-36
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 16.6631 dB
+===> Overall Avg. SSIM: 0.8084
+===> Avg. time: 0.5926 s
+-----------------------------
+
+ Testing Epoch-36
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 16.6631 dB
+===> Overall Avg. SSIM: 0.8084
+===> Avg. time: 0.5926 s
+-----------------------------
+
+ Testing Epoch-36
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 16.6631 dB
+===> Overall Avg. SSIM: 0.8084
+===> Avg. time: 0.5926 s
+-----------------------------
+
+ Testing Epoch-36
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 16.6631 dB
+===> Overall Avg. SSIM: 0.8084
+===> Avg. time: 0.5926 s
+-----------------------------
+
+ Testing Epoch-36
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 16.6631 dB
+===> Overall Avg. SSIM: 0.8084
+===> Avg. time: 0.5926 s
+-----------------------------
+
+ Testing Epoch-36
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.7088 dB
+===> Overall Avg. SSIM: 0.9066
+===> Avg. time: 0.5919 s
+-----------------------------
+
+ Testing Epoch-37
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.7088 dB
+===> Overall Avg. SSIM: 0.9066
+===> Avg. time: 0.5919 s
+-----------------------------
+
+ Testing Epoch-37
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.7088 dB
+===> Overall Avg. SSIM: 0.9066
+===> Avg. time: 0.5919 s
+-----------------------------
+
+ Testing Epoch-37
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.7088 dB
+===> Overall Avg. SSIM: 0.9066
+===> Avg. time: 0.5919 s
+-----------------------------
+
+ Testing Epoch-37
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.7088 dB
+===> Overall Avg. SSIM: 0.9066
+===> Avg. time: 0.5919 s
+-----------------------------
+
+ Testing Epoch-37
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.7088 dB
+===> Overall Avg. SSIM: 0.9066
+===> Avg. time: 0.5919 s
+-----------------------------
+
+ Testing Epoch-37
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.7088 dB
+===> Overall Avg. SSIM: 0.9066
+===> Avg. time: 0.5919 s
+-----------------------------
+
+ Testing Epoch-37
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.4392 dB
+===> Overall Avg. SSIM: 0.8990
+===> Avg. time: 0.5916 s
+-----------------------------
+
+ Testing Epoch-38
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.4392 dB
+===> Overall Avg. SSIM: 0.8990
+===> Avg. time: 0.5916 s
+-----------------------------
+
+ Testing Epoch-38
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.4392 dB
+===> Overall Avg. SSIM: 0.8990
+===> Avg. time: 0.5916 s
+-----------------------------
+
+ Testing Epoch-38
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.4392 dB
+===> Overall Avg. SSIM: 0.8990
+===> Avg. time: 0.5916 s
+-----------------------------
+
+ Testing Epoch-38
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.4392 dB
+===> Overall Avg. SSIM: 0.8990
+===> Avg. time: 0.5916 s
+-----------------------------
+
+ Testing Epoch-38
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.4392 dB
+===> Overall Avg. SSIM: 0.8990
+===> Avg. time: 0.5916 s
+-----------------------------
+
+ Testing Epoch-38
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.4392 dB
+===> Overall Avg. SSIM: 0.8990
+===> Avg. time: 0.5916 s
+-----------------------------
+
+ Testing Epoch-38
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.4392 dB
+===> Overall Avg. SSIM: 0.8990
+===> Avg. time: 0.5916 s
+-----------------------------
+
+ Testing Epoch-38
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.0245 dB
+===> Overall Avg. SSIM: 0.8744
+===> Avg. time: 0.5939 s
+-----------------------------
+
+ Testing Epoch-39
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.0245 dB
+===> Overall Avg. SSIM: 0.8744
+===> Avg. time: 0.5939 s
+-----------------------------
+
+ Testing Epoch-39
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.0245 dB
+===> Overall Avg. SSIM: 0.8744
+===> Avg. time: 0.5939 s
+-----------------------------
+
+ Testing Epoch-39
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.0245 dB
+===> Overall Avg. SSIM: 0.8744
+===> Avg. time: 0.5939 s
+-----------------------------
+
+ Testing Epoch-39
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.0245 dB
+===> Overall Avg. SSIM: 0.8744
+===> Avg. time: 0.5939 s
+-----------------------------
+
+ Testing Epoch-39
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.0245 dB
+===> Overall Avg. SSIM: 0.8744
+===> Avg. time: 0.5939 s
+-----------------------------
+
+ Testing Epoch-39
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.0245 dB
+===> Overall Avg. SSIM: 0.8744
+===> Avg. time: 0.5939 s
+-----------------------------
+
+ Testing Epoch-39
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.0245 dB
+===> Overall Avg. SSIM: 0.8744
+===> Avg. time: 0.5939 s
+-----------------------------
+
+ Testing Epoch-39
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.0245 dB
+===> Overall Avg. SSIM: 0.8744
+===> Avg. time: 0.5939 s
+-----------------------------
+
+ Testing Epoch-39
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 20.2758 dB
+===> Overall Avg. SSIM: 0.8771
+===> Avg. time: 0.6164 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 20.2758 dB
+===> Overall Avg. SSIM: 0.8771
+===> Avg. time: 0.6164 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 20.2758 dB
+===> Overall Avg. SSIM: 0.8771
+===> Avg. time: 0.6164 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 20.2758 dB
+===> Overall Avg. SSIM: 0.8771
+===> Avg. time: 0.6164 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 20.2758 dB
+===> Overall Avg. SSIM: 0.8771
+===> Avg. time: 0.6164 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 20.2758 dB
+===> Overall Avg. SSIM: 0.8771
+===> Avg. time: 0.6164 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 20.2758 dB
+===> Overall Avg. SSIM: 0.8771
+===> Avg. time: 0.6164 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 20.2758 dB
+===> Overall Avg. SSIM: 0.8771
+===> Avg. time: 0.6164 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 20.2758 dB
+===> Overall Avg. SSIM: 0.8771
+===> Avg. time: 0.6164 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 20.2758 dB
+===> Overall Avg. SSIM: 0.8771
+===> Avg. time: 0.6164 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.0913 dB
+===> Overall Avg. SSIM: 0.8911
+===> Avg. time: 0.5943 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.0913 dB
+===> Overall Avg. SSIM: 0.8911
+===> Avg. time: 0.5943 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.0913 dB
+===> Overall Avg. SSIM: 0.8911
+===> Avg. time: 0.5943 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.0913 dB
+===> Overall Avg. SSIM: 0.8911
+===> Avg. time: 0.5943 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.0913 dB
+===> Overall Avg. SSIM: 0.8911
+===> Avg. time: 0.5943 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.0913 dB
+===> Overall Avg. SSIM: 0.8911
+===> Avg. time: 0.5943 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.0913 dB
+===> Overall Avg. SSIM: 0.8911
+===> Avg. time: 0.5943 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.0913 dB
+===> Overall Avg. SSIM: 0.8911
+===> Avg. time: 0.5943 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.0913 dB
+===> Overall Avg. SSIM: 0.8911
+===> Avg. time: 0.5943 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.0913 dB
+===> Overall Avg. SSIM: 0.8911
+===> Avg. time: 0.5943 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.0913 dB
+===> Overall Avg. SSIM: 0.8911
+===> Avg. time: 0.5943 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 24.0693 dB
+===> Overall Avg. SSIM: 0.8678
+===> Avg. time: 0.5986 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 24.0693 dB
+===> Overall Avg. SSIM: 0.8678
+===> Avg. time: 0.5986 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 24.0693 dB
+===> Overall Avg. SSIM: 0.8678
+===> Avg. time: 0.5986 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 24.0693 dB
+===> Overall Avg. SSIM: 0.8678
+===> Avg. time: 0.5986 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 24.0693 dB
+===> Overall Avg. SSIM: 0.8678
+===> Avg. time: 0.5986 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 24.0693 dB
+===> Overall Avg. SSIM: 0.8678
+===> Avg. time: 0.5986 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 24.0693 dB
+===> Overall Avg. SSIM: 0.8678
+===> Avg. time: 0.5986 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 24.0693 dB
+===> Overall Avg. SSIM: 0.8678
+===> Avg. time: 0.5986 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 24.0693 dB
+===> Overall Avg. SSIM: 0.8678
+===> Avg. time: 0.5986 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 24.0693 dB
+===> Overall Avg. SSIM: 0.8678
+===> Avg. time: 0.5986 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 24.0693 dB
+===> Overall Avg. SSIM: 0.8678
+===> Avg. time: 0.5986 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 24.0693 dB
+===> Overall Avg. SSIM: 0.8678
+===> Avg. time: 0.5986 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.8372 dB
+===> Overall Avg. SSIM: 0.8588
+===> Avg. time: 0.6078 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.8372 dB
+===> Overall Avg. SSIM: 0.8588
+===> Avg. time: 0.6078 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.8372 dB
+===> Overall Avg. SSIM: 0.8588
+===> Avg. time: 0.6078 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.8372 dB
+===> Overall Avg. SSIM: 0.8588
+===> Avg. time: 0.6078 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.8372 dB
+===> Overall Avg. SSIM: 0.8588
+===> Avg. time: 0.6078 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.8372 dB
+===> Overall Avg. SSIM: 0.8588
+===> Avg. time: 0.6078 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.8372 dB
+===> Overall Avg. SSIM: 0.8588
+===> Avg. time: 0.6078 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.8372 dB
+===> Overall Avg. SSIM: 0.8588
+===> Avg. time: 0.6078 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.8372 dB
+===> Overall Avg. SSIM: 0.8588
+===> Avg. time: 0.6078 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.8372 dB
+===> Overall Avg. SSIM: 0.8588
+===> Avg. time: 0.6078 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.8372 dB
+===> Overall Avg. SSIM: 0.8588
+===> Avg. time: 0.6078 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.8372 dB
+===> Overall Avg. SSIM: 0.8588
+===> Avg. time: 0.6078 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.8372 dB
+===> Overall Avg. SSIM: 0.8588
+===> Avg. time: 0.6078 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.2153 dB
+===> Overall Avg. SSIM: 0.8856
+===> Avg. time: 0.6122 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.2153 dB
+===> Overall Avg. SSIM: 0.8856
+===> Avg. time: 0.6122 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.2153 dB
+===> Overall Avg. SSIM: 0.8856
+===> Avg. time: 0.6122 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.2153 dB
+===> Overall Avg. SSIM: 0.8856
+===> Avg. time: 0.6122 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.2153 dB
+===> Overall Avg. SSIM: 0.8856
+===> Avg. time: 0.6122 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.2153 dB
+===> Overall Avg. SSIM: 0.8856
+===> Avg. time: 0.6122 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.2153 dB
+===> Overall Avg. SSIM: 0.8856
+===> Avg. time: 0.6122 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.2153 dB
+===> Overall Avg. SSIM: 0.8856
+===> Avg. time: 0.6122 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.2153 dB
+===> Overall Avg. SSIM: 0.8856
+===> Avg. time: 0.6122 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.2153 dB
+===> Overall Avg. SSIM: 0.8856
+===> Avg. time: 0.6122 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.2153 dB
+===> Overall Avg. SSIM: 0.8856
+===> Avg. time: 0.6122 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.2153 dB
+===> Overall Avg. SSIM: 0.8856
+===> Avg. time: 0.6122 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.2153 dB
+===> Overall Avg. SSIM: 0.8856
+===> Avg. time: 0.6122 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.2153 dB
+===> Overall Avg. SSIM: 0.8856
+===> Avg. time: 0.6122 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 14.8752 dB
+===> Overall Avg. SSIM: 0.8445
+===> Avg. time: 0.6042 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 14.8752 dB
+===> Overall Avg. SSIM: 0.8445
+===> Avg. time: 0.6042 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 14.8752 dB
+===> Overall Avg. SSIM: 0.8445
+===> Avg. time: 0.6042 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 14.8752 dB
+===> Overall Avg. SSIM: 0.8445
+===> Avg. time: 0.6042 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 14.8752 dB
+===> Overall Avg. SSIM: 0.8445
+===> Avg. time: 0.6042 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 14.8752 dB
+===> Overall Avg. SSIM: 0.8445
+===> Avg. time: 0.6042 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 14.8752 dB
+===> Overall Avg. SSIM: 0.8445
+===> Avg. time: 0.6042 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 14.8752 dB
+===> Overall Avg. SSIM: 0.8445
+===> Avg. time: 0.6042 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 14.8752 dB
+===> Overall Avg. SSIM: 0.8445
+===> Avg. time: 0.6042 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 14.8752 dB
+===> Overall Avg. SSIM: 0.8445
+===> Avg. time: 0.6042 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 14.8752 dB
+===> Overall Avg. SSIM: 0.8445
+===> Avg. time: 0.6042 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 14.8752 dB
+===> Overall Avg. SSIM: 0.8445
+===> Avg. time: 0.6042 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 14.8752 dB
+===> Overall Avg. SSIM: 0.8445
+===> Avg. time: 0.6042 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 14.8752 dB
+===> Overall Avg. SSIM: 0.8445
+===> Avg. time: 0.6042 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 14.8752 dB
+===> Overall Avg. SSIM: 0.8445
+===> Avg. time: 0.6042 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.6051 s
+-----------------------------
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.6051 s
+-----------------------------
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.6051 s
+-----------------------------
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.6051 s
+-----------------------------
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.6051 s
+-----------------------------
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.6051 s
+-----------------------------
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.6051 s
+-----------------------------
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.6051 s
+-----------------------------
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.6051 s
+-----------------------------
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.6051 s
+-----------------------------
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.6051 s
+-----------------------------
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.6051 s
+-----------------------------
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.6051 s
+-----------------------------
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.6051 s
+-----------------------------
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.6051 s
+-----------------------------
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.6051 s
+-----------------------------
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.8065 dB
+===> Overall Avg. SSIM: 0.8200
+===> Avg. time: 1.7388 s
+-----------------------------
+
+ Testing Epoch-31
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.3254 dB
+===> Overall Avg. SSIM: 0.7589
+===> Avg. time: 0.6753 s
+-----------------------------
+
+ Testing Epoch-32
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.3254 dB
+===> Overall Avg. SSIM: 0.7589
+===> Avg. time: 0.6753 s
+-----------------------------
+
+ Testing Epoch-32
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 26.6471 dB
+===> Overall Avg. SSIM: 0.9120
+===> Avg. time: 0.5920 s
+-----------------------------
+
+ Testing Epoch-33
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 26.6471 dB
+===> Overall Avg. SSIM: 0.9120
+===> Avg. time: 0.5920 s
+-----------------------------
+
+ Testing Epoch-33
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 26.6471 dB
+===> Overall Avg. SSIM: 0.9120
+===> Avg. time: 0.5920 s
+-----------------------------
+
+ Testing Epoch-33
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.1789 dB
+===> Overall Avg. SSIM: 0.8953
+===> Avg. time: 0.5903 s
+-----------------------------
+
+ Testing Epoch-34
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.1789 dB
+===> Overall Avg. SSIM: 0.8953
+===> Avg. time: 0.5903 s
+-----------------------------
+
+ Testing Epoch-34
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.1789 dB
+===> Overall Avg. SSIM: 0.8953
+===> Avg. time: 0.5903 s
+-----------------------------
+
+ Testing Epoch-34
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.1789 dB
+===> Overall Avg. SSIM: 0.8953
+===> Avg. time: 0.5903 s
+-----------------------------
+
+ Testing Epoch-34
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 17.2879 dB
+===> Overall Avg. SSIM: 0.8304
+===> Avg. time: 0.5898 s
+-----------------------------
+
+ Testing Epoch-35
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 17.2879 dB
+===> Overall Avg. SSIM: 0.8304
+===> Avg. time: 0.5898 s
+-----------------------------
+
+ Testing Epoch-35
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 17.2879 dB
+===> Overall Avg. SSIM: 0.8304
+===> Avg. time: 0.5898 s
+-----------------------------
+
+ Testing Epoch-35
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 17.2879 dB
+===> Overall Avg. SSIM: 0.8304
+===> Avg. time: 0.5898 s
+-----------------------------
+
+ Testing Epoch-35
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 17.2879 dB
+===> Overall Avg. SSIM: 0.8304
+===> Avg. time: 0.5898 s
+-----------------------------
+
+ Testing Epoch-35
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 16.6631 dB
+===> Overall Avg. SSIM: 0.8084
+===> Avg. time: 0.5878 s
+-----------------------------
+
+ Testing Epoch-36
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 16.6631 dB
+===> Overall Avg. SSIM: 0.8084
+===> Avg. time: 0.5878 s
+-----------------------------
+
+ Testing Epoch-36
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 16.6631 dB
+===> Overall Avg. SSIM: 0.8084
+===> Avg. time: 0.5878 s
+-----------------------------
+
+ Testing Epoch-36
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 16.6631 dB
+===> Overall Avg. SSIM: 0.8084
+===> Avg. time: 0.5878 s
+-----------------------------
+
+ Testing Epoch-36
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 16.6631 dB
+===> Overall Avg. SSIM: 0.8084
+===> Avg. time: 0.5878 s
+-----------------------------
+
+ Testing Epoch-36
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 16.6631 dB
+===> Overall Avg. SSIM: 0.8084
+===> Avg. time: 0.5878 s
+-----------------------------
+
+ Testing Epoch-36
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.7088 dB
+===> Overall Avg. SSIM: 0.9066
+===> Avg. time: 0.5896 s
+-----------------------------
+
+ Testing Epoch-37
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.7088 dB
+===> Overall Avg. SSIM: 0.9066
+===> Avg. time: 0.5896 s
+-----------------------------
+
+ Testing Epoch-37
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.7088 dB
+===> Overall Avg. SSIM: 0.9066
+===> Avg. time: 0.5896 s
+-----------------------------
+
+ Testing Epoch-37
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.7088 dB
+===> Overall Avg. SSIM: 0.9066
+===> Avg. time: 0.5896 s
+-----------------------------
+
+ Testing Epoch-37
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.7088 dB
+===> Overall Avg. SSIM: 0.9066
+===> Avg. time: 0.5896 s
+-----------------------------
+
+ Testing Epoch-37
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.7088 dB
+===> Overall Avg. SSIM: 0.9066
+===> Avg. time: 0.5896 s
+-----------------------------
+
+ Testing Epoch-37
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.7088 dB
+===> Overall Avg. SSIM: 0.9066
+===> Avg. time: 0.5896 s
+-----------------------------
+
+ Testing Epoch-37
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.4392 dB
+===> Overall Avg. SSIM: 0.8990
+===> Avg. time: 0.5881 s
+-----------------------------
+
+ Testing Epoch-38
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.4392 dB
+===> Overall Avg. SSIM: 0.8990
+===> Avg. time: 0.5881 s
+-----------------------------
+
+ Testing Epoch-38
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.4392 dB
+===> Overall Avg. SSIM: 0.8990
+===> Avg. time: 0.5881 s
+-----------------------------
+
+ Testing Epoch-38
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.4392 dB
+===> Overall Avg. SSIM: 0.8990
+===> Avg. time: 0.5881 s
+-----------------------------
+
+ Testing Epoch-38
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.4392 dB
+===> Overall Avg. SSIM: 0.8990
+===> Avg. time: 0.5881 s
+-----------------------------
+
+ Testing Epoch-38
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.4392 dB
+===> Overall Avg. SSIM: 0.8990
+===> Avg. time: 0.5881 s
+-----------------------------
+
+ Testing Epoch-38
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.4392 dB
+===> Overall Avg. SSIM: 0.8990
+===> Avg. time: 0.5881 s
+-----------------------------
+
+ Testing Epoch-38
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.4392 dB
+===> Overall Avg. SSIM: 0.8990
+===> Avg. time: 0.5881 s
+-----------------------------
+
+ Testing Epoch-38
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.0245 dB
+===> Overall Avg. SSIM: 0.8744
+===> Avg. time: 0.5889 s
+-----------------------------
+
+ Testing Epoch-39
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.0245 dB
+===> Overall Avg. SSIM: 0.8744
+===> Avg. time: 0.5889 s
+-----------------------------
+
+ Testing Epoch-39
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.0245 dB
+===> Overall Avg. SSIM: 0.8744
+===> Avg. time: 0.5889 s
+-----------------------------
+
+ Testing Epoch-39
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.0245 dB
+===> Overall Avg. SSIM: 0.8744
+===> Avg. time: 0.5889 s
+-----------------------------
+
+ Testing Epoch-39
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.0245 dB
+===> Overall Avg. SSIM: 0.8744
+===> Avg. time: 0.5889 s
+-----------------------------
+
+ Testing Epoch-39
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.0245 dB
+===> Overall Avg. SSIM: 0.8744
+===> Avg. time: 0.5889 s
+-----------------------------
+
+ Testing Epoch-39
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.0245 dB
+===> Overall Avg. SSIM: 0.8744
+===> Avg. time: 0.5889 s
+-----------------------------
+
+ Testing Epoch-39
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.0245 dB
+===> Overall Avg. SSIM: 0.8744
+===> Avg. time: 0.5889 s
+-----------------------------
+
+ Testing Epoch-39
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.0245 dB
+===> Overall Avg. SSIM: 0.8744
+===> Avg. time: 0.5889 s
+-----------------------------
+
+ Testing Epoch-39
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 20.2758 dB
+===> Overall Avg. SSIM: 0.8771
+===> Avg. time: 0.6000 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 20.2758 dB
+===> Overall Avg. SSIM: 0.8771
+===> Avg. time: 0.6000 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 20.2758 dB
+===> Overall Avg. SSIM: 0.8771
+===> Avg. time: 0.6000 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 20.2758 dB
+===> Overall Avg. SSIM: 0.8771
+===> Avg. time: 0.6000 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 20.2758 dB
+===> Overall Avg. SSIM: 0.8771
+===> Avg. time: 0.6000 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 20.2758 dB
+===> Overall Avg. SSIM: 0.8771
+===> Avg. time: 0.6000 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 20.2758 dB
+===> Overall Avg. SSIM: 0.8771
+===> Avg. time: 0.6000 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 20.2758 dB
+===> Overall Avg. SSIM: 0.8771
+===> Avg. time: 0.6000 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 20.2758 dB
+===> Overall Avg. SSIM: 0.8771
+===> Avg. time: 0.6000 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 20.2758 dB
+===> Overall Avg. SSIM: 0.8771
+===> Avg. time: 0.6000 s
+-----------------------------
+
+ Testing Epoch-40
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.0913 dB
+===> Overall Avg. SSIM: 0.8911
+===> Avg. time: 0.5903 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.0913 dB
+===> Overall Avg. SSIM: 0.8911
+===> Avg. time: 0.5903 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.0913 dB
+===> Overall Avg. SSIM: 0.8911
+===> Avg. time: 0.5903 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.0913 dB
+===> Overall Avg. SSIM: 0.8911
+===> Avg. time: 0.5903 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.0913 dB
+===> Overall Avg. SSIM: 0.8911
+===> Avg. time: 0.5903 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.0913 dB
+===> Overall Avg. SSIM: 0.8911
+===> Avg. time: 0.5903 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.0913 dB
+===> Overall Avg. SSIM: 0.8911
+===> Avg. time: 0.5903 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.0913 dB
+===> Overall Avg. SSIM: 0.8911
+===> Avg. time: 0.5903 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.0913 dB
+===> Overall Avg. SSIM: 0.8911
+===> Avg. time: 0.5903 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.0913 dB
+===> Overall Avg. SSIM: 0.8911
+===> Avg. time: 0.5903 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 22.0913 dB
+===> Overall Avg. SSIM: 0.8911
+===> Avg. time: 0.5903 s
+-----------------------------
+
+ Testing Epoch-41
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 24.0693 dB
+===> Overall Avg. SSIM: 0.8678
+===> Avg. time: 0.5884 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 24.0693 dB
+===> Overall Avg. SSIM: 0.8678
+===> Avg. time: 0.5884 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 24.0693 dB
+===> Overall Avg. SSIM: 0.8678
+===> Avg. time: 0.5884 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 24.0693 dB
+===> Overall Avg. SSIM: 0.8678
+===> Avg. time: 0.5884 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 24.0693 dB
+===> Overall Avg. SSIM: 0.8678
+===> Avg. time: 0.5884 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 24.0693 dB
+===> Overall Avg. SSIM: 0.8678
+===> Avg. time: 0.5884 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 24.0693 dB
+===> Overall Avg. SSIM: 0.8678
+===> Avg. time: 0.5884 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 24.0693 dB
+===> Overall Avg. SSIM: 0.8678
+===> Avg. time: 0.5884 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 24.0693 dB
+===> Overall Avg. SSIM: 0.8678
+===> Avg. time: 0.5884 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 24.0693 dB
+===> Overall Avg. SSIM: 0.8678
+===> Avg. time: 0.5884 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 24.0693 dB
+===> Overall Avg. SSIM: 0.8678
+===> Avg. time: 0.5884 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 24.0693 dB
+===> Overall Avg. SSIM: 0.8678
+===> Avg. time: 0.5884 s
+-----------------------------
+
+ Testing Epoch-42
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.8372 dB
+===> Overall Avg. SSIM: 0.8588
+===> Avg. time: 0.5942 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.8372 dB
+===> Overall Avg. SSIM: 0.8588
+===> Avg. time: 0.5942 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.8372 dB
+===> Overall Avg. SSIM: 0.8588
+===> Avg. time: 0.5942 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.8372 dB
+===> Overall Avg. SSIM: 0.8588
+===> Avg. time: 0.5942 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.8372 dB
+===> Overall Avg. SSIM: 0.8588
+===> Avg. time: 0.5942 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.8372 dB
+===> Overall Avg. SSIM: 0.8588
+===> Avg. time: 0.5942 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.8372 dB
+===> Overall Avg. SSIM: 0.8588
+===> Avg. time: 0.5942 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.8372 dB
+===> Overall Avg. SSIM: 0.8588
+===> Avg. time: 0.5942 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.8372 dB
+===> Overall Avg. SSIM: 0.8588
+===> Avg. time: 0.5942 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.8372 dB
+===> Overall Avg. SSIM: 0.8588
+===> Avg. time: 0.5942 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.8372 dB
+===> Overall Avg. SSIM: 0.8588
+===> Avg. time: 0.5942 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.8372 dB
+===> Overall Avg. SSIM: 0.8588
+===> Avg. time: 0.5942 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 23.8372 dB
+===> Overall Avg. SSIM: 0.8588
+===> Avg. time: 0.5942 s
+-----------------------------
+
+ Testing Epoch-43
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.2153 dB
+===> Overall Avg. SSIM: 0.8856
+===> Avg. time: 0.6029 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.2153 dB
+===> Overall Avg. SSIM: 0.8856
+===> Avg. time: 0.6029 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.2153 dB
+===> Overall Avg. SSIM: 0.8856
+===> Avg. time: 0.6029 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.2153 dB
+===> Overall Avg. SSIM: 0.8856
+===> Avg. time: 0.6029 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.2153 dB
+===> Overall Avg. SSIM: 0.8856
+===> Avg. time: 0.6029 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.2153 dB
+===> Overall Avg. SSIM: 0.8856
+===> Avg. time: 0.6029 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.2153 dB
+===> Overall Avg. SSIM: 0.8856
+===> Avg. time: 0.6029 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.2153 dB
+===> Overall Avg. SSIM: 0.8856
+===> Avg. time: 0.6029 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.2153 dB
+===> Overall Avg. SSIM: 0.8856
+===> Avg. time: 0.6029 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.2153 dB
+===> Overall Avg. SSIM: 0.8856
+===> Avg. time: 0.6029 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.2153 dB
+===> Overall Avg. SSIM: 0.8856
+===> Avg. time: 0.6029 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.2153 dB
+===> Overall Avg. SSIM: 0.8856
+===> Avg. time: 0.6029 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.2153 dB
+===> Overall Avg. SSIM: 0.8856
+===> Avg. time: 0.6029 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 21.2153 dB
+===> Overall Avg. SSIM: 0.8856
+===> Avg. time: 0.6029 s
+-----------------------------
+
+ Testing Epoch-44
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 14.8752 dB
+===> Overall Avg. SSIM: 0.8445
+===> Avg. time: 0.5888 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 14.8752 dB
+===> Overall Avg. SSIM: 0.8445
+===> Avg. time: 0.5888 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 14.8752 dB
+===> Overall Avg. SSIM: 0.8445
+===> Avg. time: 0.5888 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 14.8752 dB
+===> Overall Avg. SSIM: 0.8445
+===> Avg. time: 0.5888 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 14.8752 dB
+===> Overall Avg. SSIM: 0.8445
+===> Avg. time: 0.5888 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 14.8752 dB
+===> Overall Avg. SSIM: 0.8445
+===> Avg. time: 0.5888 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 14.8752 dB
+===> Overall Avg. SSIM: 0.8445
+===> Avg. time: 0.5888 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 14.8752 dB
+===> Overall Avg. SSIM: 0.8445
+===> Avg. time: 0.5888 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 14.8752 dB
+===> Overall Avg. SSIM: 0.8445
+===> Avg. time: 0.5888 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 14.8752 dB
+===> Overall Avg. SSIM: 0.8445
+===> Avg. time: 0.5888 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 14.8752 dB
+===> Overall Avg. SSIM: 0.8445
+===> Avg. time: 0.5888 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 14.8752 dB
+===> Overall Avg. SSIM: 0.8445
+===> Avg. time: 0.5888 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 14.8752 dB
+===> Overall Avg. SSIM: 0.8445
+===> Avg. time: 0.5888 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 14.8752 dB
+===> Overall Avg. SSIM: 0.8445
+===> Avg. time: 0.5888 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Overall Avg. PSNR: 14.8752 dB
+===> Overall Avg. SSIM: 0.8445
+===> Avg. time: 0.5888 s
+-----------------------------
+
+ Testing Epoch-45
+===> Loading existing model
+===> Loading test datasets
+===> Loading test datasets
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.5883 s
+-----------------------------
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.5883 s
+-----------------------------
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.5883 s
+-----------------------------
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.5883 s
+-----------------------------
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.5883 s
+-----------------------------
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.5883 s
+-----------------------------
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.5883 s
+-----------------------------
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.5883 s
+-----------------------------
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.5883 s
+-----------------------------
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.5883 s
+-----------------------------
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.5883 s
+-----------------------------
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.5883 s
+-----------------------------
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.5883 s
+-----------------------------
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.5883 s
+-----------------------------
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.5883 s
+-----------------------------
+===> Overall Avg. PSNR: 17.7436 dB
+===> Overall Avg. SSIM: 0.8722
+===> Avg. time: 0.5883 s
+-----------------------------
