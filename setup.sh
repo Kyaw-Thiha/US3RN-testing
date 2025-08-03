@@ -14,12 +14,12 @@ fi
 
 REMOTE_IP=$(curl -s https://ipinfo.io/ip)
 
-echo "📦 Installing Deadsnakes Python 3.12 and dependencies..."
+echo "📦 Installing Deadsnakes Python 3.11 and dependencies..."
 apt update
 apt install -y software-properties-common
 add-apt-repository ppa:deadsnakes/ppa -y
 apt update
-apt install -y python3.12 python3.12-venv python3.12-dev
+apt install -y python3.11 python3.11-venv python3.11-dev
 
 echo "📁 Setting up virtual environment at $VENV_DIR..."
 cd "$PROJECT_DIR"
@@ -27,9 +27,10 @@ if [[ -n "$VIRTUAL_ENV" ]]; then
   deactivate
 fi
 rm -rf .env
-python3.12 -m venv .env
+python3.11 -m venv .env
 
 echo "⬆️ Installing pip..."
+source .env/bin/activate
 curl -sS https://bootstrap.pypa.io/get-pip.py | python
 pip install --upgrade pip
 
