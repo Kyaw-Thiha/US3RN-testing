@@ -28,7 +28,6 @@ if [[ -n "$VIRTUAL_ENV" ]]; then
 fi
 rm -rf .env
 python3.12 -m venv .env
-source .env/bin/activate
 
 echo "⬆️ Installing pip..."
 curl -sS https://bootstrap.pypa.io/get-pip.py | python
@@ -41,5 +40,8 @@ echo ""
 echo "📂 Ready. Now upload your data:"
 echo "Run this on your local machine:"
 echo "  scp -P $SSH_PORT -r ~/Documents/Projects/US3RN-testing/data root@$REMOTE_IP:$PROJECT_DIR/"
+echo ""
+echo "Run this to activate virtual environment:"
+echo "  source $PROJECT_DIR/.env/bin/activate"
 echo ""
 echo "✅ Setup complete!"
