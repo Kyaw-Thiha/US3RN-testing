@@ -26,6 +26,9 @@ def plot_test(df: pd.DataFrame, key: KeyType) -> None:
         key : Literal["epoch", "batch"]
             Column to use as x-axis.
     """
+    # Sort by key to ensure lines are connected properly
+    df = df.sort_values(by=key).reset_index(drop=True)
+
     # Normalize PSNR between 0 and 1
     psnr_min, psnr_max = df["psnr"].min(), df["psnr"].max()
     df["psnr_norm"] = (df["psnr"] - psnr_min) / (psnr_max - psnr_min)
@@ -101,6 +104,7 @@ def plot_test(df: pd.DataFrame, key: KeyType) -> None:
 
 def plot_psnr(df: pd.DataFrame, key: KeyType) -> None:
     """Plot PSNR curve with interactive hover."""
+    df = df.sort_values(by=key).reset_index(drop=True)
     fig = px.line(df, x=key, y="psnr", title=f"PSNR per {key.capitalize()}", markers=True)
     fig.update_layout(xaxis_title=key.capitalize(), yaxis_title="PSNR (dB)")
     fig.show()
@@ -108,6 +112,7 @@ def plot_psnr(df: pd.DataFrame, key: KeyType) -> None:
 
 def plot_ssim(df: pd.DataFrame, key: KeyType) -> None:
     """Plot SSIM curve with interactive hover."""
+    df = df.sort_values(by=key).reset_index(drop=True)
     fig = px.line(df, x=key, y="ssim", title=f"SSIM per {key.capitalize()}", markers=True)
     fig.update_layout(xaxis_title=key.capitalize(), yaxis_title="SSIM")
     fig.show()
